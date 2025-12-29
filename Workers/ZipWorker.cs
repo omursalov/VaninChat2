@@ -31,5 +31,20 @@ namespace VaninChat2.Workers
 
             return result;
         }
+
+        public FileObj Create(string archieveName, Stream stream)
+        {
+            if (!archieveName.EndsWith(".zip"))
+                archieveName = $"{archieveName}.zip";
+
+            var result = new FileObj(archieveName);
+
+            using (var archive = new IronZipArchive(stream, _pass))
+            {
+                archive.SaveAs(archieveName);
+            }
+
+            return result;
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using VaninChat2.Common;
+using VaninChat2.Validators;
 using VaninChat2.Workers;
 
 namespace VaninChat2
@@ -21,16 +22,18 @@ namespace VaninChat2
             CONNECT_BTN.IsEnabled = false;
 
             #region Validation
-            if (string.IsNullOrWhiteSpace(EDITOR_NAME.Text))
+            var nameValidator = new NameValidator();
+
+            if (string.IsNullOrEmpty(EDITOR_NAME.Text))
             {
                 await DisplayAlert("Не заполнены обязательные поля", "Укажите имя", "OK");
                 CONNECT_BTN.IsEnabled = true;
                 return;
             }
 
-            if (EDITOR_NAME.Text.Any(x => Char.IsWhiteSpace(x)))
+            if (!nameValidator.Check(EDITOR_NAME.Text))
             {
-                await DisplayAlert("Имя указано не верно", "Уберите пробелы", "OK");
+                await DisplayAlert("Имя указано не верно", $"Уберите пробелы и символы {nameValidator.InvalidChars}", "OK");
                 CONNECT_BTN.IsEnabled = true;
                 return;
             }
@@ -42,7 +45,7 @@ namespace VaninChat2
                 return;
             }
 
-            if (string.IsNullOrWhiteSpace(EDITOR_PASS.Text))
+            if (string.IsNullOrEmpty(EDITOR_PASS.Text))
             {
                 await DisplayAlert("Не заполнены обязательные поля", "Укажите пароль", "OK");
                 CONNECT_BTN.IsEnabled = true;
@@ -63,16 +66,16 @@ namespace VaninChat2
                 return;
             }
 
-            if (string.IsNullOrWhiteSpace(EDITOR_COMPANION_NAME.Text))
+            if (string.IsNullOrEmpty(EDITOR_COMPANION_NAME.Text))
             {
                 await DisplayAlert("Не заполнены обязательные поля", "Укажите имя собеседника", "OK");
                 CONNECT_BTN.IsEnabled = true;
                 return;
             }
 
-            if (EDITOR_COMPANION_NAME.Text.Any(x => Char.IsWhiteSpace(x)))
+            if (!nameValidator.Check(EDITOR_COMPANION_NAME.Text))
             {
-                await DisplayAlert("Имя собеседника указано не верно", "Уберите пробелы", "OK");
+                await DisplayAlert("Имя собеседника указано не верно", $"Уберите пробелы и символы {nameValidator.InvalidChars}", "OK");
                 CONNECT_BTN.IsEnabled = true;
                 return;
             }

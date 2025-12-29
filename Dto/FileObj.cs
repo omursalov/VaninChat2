@@ -14,7 +14,10 @@
 
         public void Dispose()
         {
-            File.Delete(_name);
+            if (File.Exists(_name))
+            {
+                File.Delete(_name);
+            }
         }
     }
 }

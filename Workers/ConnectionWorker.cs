@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using IronZip;
+using Microsoft.Maui.Storage;
+using Newtonsoft.Json;
 using System.Net.Http.Headers;
 using VaninChat2.Dto;
 
@@ -6,14 +8,10 @@ namespace VaninChat2.Workers
 {
     public class ConnectionWorker
     {
-        private const string BIN = "ZgNmTY05XjQgNgBc";
-        private const string ZIP_NAME = "OZFpyfTGOIERdzQ5";
-        private const string TXT_FILE_NAME = "info.txt";
-        private const string INTERNAL_PASS = "o0nZZZ0000ZZzZZ__)(FZ*7y-R}V?n3N&&^^&9";
+        private const string CONTROL_STRING = "Bw8UTFezNR01ma9ZZS8uo68MvYVHrwafeLvnRKl6KCJ";
 
         private readonly DateTime _startDateTimeUtc;
         private readonly int _minutes;
-        private readonly string _postfix;
 
         private readonly string _myName;
         private readonly string _myPass;
@@ -22,7 +20,6 @@ namespace VaninChat2.Workers
         private readonly string _bin;
         private readonly string _myZipName;
         private readonly string _companionZipName;
-        private readonly string _internalPass;
 
         private ConnectionInfo _info;
 
@@ -33,14 +30,14 @@ namespace VaninChat2.Workers
         {
             _startDateTimeUtc = DateTime.UtcNow;
             _minutes = minutes;
-            _postfix = _startDateTimeUtc.AddMinutes(minutes).ToString("yyyy-MM-dd-HH-mm");
+
             _myName = myName;
             _myPass = myPass;
             _companionName = companionName;
-            _bin = $"{BIN}-{_postfix}";
-            _myZipName = $"{ZIP_NAME}-{_myName}-{_postfix}.zip";
-            _companionZipName = $"{ZIP_NAME}-{_companionName}-{_postfix}.zip";
-            _internalPass = $"{INTERNAL_PASS}-{_postfix}";
+
+            _bin = SymbolShuffling(_myName, _companionName, CONTROL_STRING);
+            _myZipName = $"{SymbolShuffling(_myName, CONTROL_STRING)}.zip";
+            _companionZipName = $"{SymbolShuffling(_companionName, CONTROL_STRING)}.zip";
         }
 
         public async Task<bool> ExecuteAsync()
@@ -53,8 +50,8 @@ namespace VaninChat2.Workers
         private async Task<bool> SendMyInfoAsync()
             => await new ProxyWorker().ExecuteAsync(async (httpClient) =>
         {
-            using (var zipObj = new ZipWorker(_internalPass)
-                .CreateTxtFileAndPutToArchieve(_myZipName, TXT_FILE_NAME, _myPass))
+            using (var zipObj = new ZipWorker(CONTROL_STRING)
+                .CreateTxtFileAndPutToArchieve(_myZipName, "info.txt", _myPass))
             {
                 using var requestContent = new MultipartFormDataContent();
 
@@ -94,18 +91,37 @@ namespace VaninChat2.Workers
             {
                 var url = $"https://filebin.net/{_bin}/{_companionZipName}";
                 httpClient.DefaultRequestHeaders.Add("bin", _bin);
-                httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
+                httpClient.DefaultRequestHeaders.Add("Accept", "*/*");
                 using var response = await httpClient.GetAsync(url);
-                var responseContent = await response.Content.ReadAsStringAsync();
+                var bytes = await response.Content.ReadAsByteArrayAsync();
+                File.WriteAllBytes(_companionZipName, bytes);
 
-                var files = JsonConvert.DeserializeObject<BinDto>(responseContent).files;
+                /*using (var archive = new IronZipArchive(await response.Content.ReadAsByteArrayAsync(), CONTROL_STRING))
+                {
+                    var dir = Directory.GetCurrentDirectory().TrimEnd('\\', '/');
+                    archive.SaveAs(dir + "/" + _companionZipName);
+                }*/
+                
+                /*using (var fs = new FileStream(_companionZipName, FileMode.CreateNew))
+                {
+                    await response.Content.CopyToAsync(fs);
+                }*/
+
+                /*var files = JsonConvert.DeserializeObject<BinDto>(responseContent).files;
                 var companionZip = files.FirstOrDefault(x => x.filename.Equals(_companionName, StringComparison.OrdinalIgnoreCase));
 
                 if (companionZip == null)
-                    throw new Exception("waiting for companion zip..");
+                    throw new Exception("waiting for companion zip..");*/
 
                 return true;
             });
+
+        private string SymbolShuffling(params string[] values)
+        {
+            var characters = string.Concat(values).ToArray();
+            Array.Sort(characters);
+            return new string(characters);
+        }
 
         private bool IsExpired()
         {
