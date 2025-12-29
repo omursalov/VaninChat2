@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VaninChat2.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+        Padding="30,0"
+        Spacing="25">
+            <Editor x:Name="EDITOR_NAME" Placeholder="имя" AutoSize="TextChanges" />
+
+            <Editor x:Name="EDITOR_PASS" Placeholder="пароль" AutoSize="TextChanges" />
+
+            <Editor x:Name="EDITOR_MESSAGE" Placeholder="сообщение" AutoSize="TextChanges" MinimumHeightRequest="150" />
+
+            <Button
+            x:Name="CONNECT_BTN"
+            Text="подключиться" 
+            Clicked="ConnectAsync"
+            HorizontalOptions="Fill"/>
+
+            <Label 
+            x:Name="ConnectLabel"
+            FontSize="16"
+            CharacterSpacing = "2"
+            FontAttributes = "Bold"
+            HorizontalOptions="Center" 
+            VerticalOptions="Center"
+            IsVisible="False"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
