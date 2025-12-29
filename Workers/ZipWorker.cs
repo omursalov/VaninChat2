@@ -1,30 +1,35 @@
 ﻿using IronZip;
-using System.Text;
 using VaninChat2.Dto;
 
 namespace VaninChat2.Workers
 {
     public class ZipWorker
     {
-        public ZipData CreateTxtFileAndPutToArchieve(string archieveName, string fileName, string content)
+        private readonly string _pass;
+
+        public ZipWorker(string pass)
         {
-            using (var archive = new IronZipArchive())
-            {
-                CreateTxtFile(fileName, content);
-                archive.Add(fileName);
-                archive.SaveAs(archieveName);
-                File.Delete(fileName);
-                archive.Encrypt(archieveName, IronZip.Enum.EncryptionMethods.AES256);
-            }
+            _pass = pass;
         }
 
-        private void CreateTxtFile(string fileName, string content)
+        public FileObj CreateTxtFileAndPutToArchieve(string archieveName, string fileName, string content)
         {
-            using (var fs = File.Create(fileName))
+            if (!archieveName.EndsWith(".zip"))
+                archieveName = $"{archieveName}.zip";
+
+            var result = new FileObj(archieveName);
+
+            using (var archive = new IronZipArchive())
             {
-                var title = Encoding.Unicode.GetBytes(content);
-                fs.Write(title, 0, title.Length);
+                using (new FileWorker().CreateTxtFile(fileName, content))
+                {
+                    archive.Add(fileName);
+                    archive.Encrypt(_pass, IronZip.Enum.EncryptionMethods.AES256);
+                    archive.SaveAs(archieveName);
+                }
             }
+
+            return result;
         }
     }
 }

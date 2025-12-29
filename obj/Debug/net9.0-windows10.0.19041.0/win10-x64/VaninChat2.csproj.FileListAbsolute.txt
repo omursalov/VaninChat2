@@ -535,3 +535,4 @@ C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-windows10.0.19041.0\win10
 C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\System.Security.Cryptography.ProtectedData.dll
 C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\System.Security.Permissions.dll
 C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\System.Windows.Extensions.dll
+C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\VaninChat2.sourcelink.json

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace VaninChat2.Dto
 {
-    public class ZipData : IDisposable
+    public class ConnectionInfo
     {
+        private readonly string _commonPassword;
     }
 }
