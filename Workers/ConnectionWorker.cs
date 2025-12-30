@@ -1,6 +1,4 @@
-﻿using IronZip;
-using Microsoft.Maui.Storage;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System.Net.Http.Headers;
 using VaninChat2.Dto;
 
@@ -8,7 +6,8 @@ namespace VaninChat2.Workers
 {
     public class ConnectionWorker
     {
-        private const string CONTROL_STRING = "Bw8UTFezNR01ma9ZZS8uo68MvYVHrwafeLvnRKl6KCJ";
+        private const string CONTROL_STRING = "06a9c0bf5bd7285e2c6b38d6cfefa5d0";
+        private const string API_URL = "https://filebin.net";
 
         private readonly DateTime _startDateTimeUtc;
         private readonly int _minutes;
@@ -18,8 +17,8 @@ namespace VaninChat2.Workers
         private readonly string _companionName;
 
         private readonly string _bin;
-        private readonly string _myZipName;
-        private readonly string _companionZipName;
+        private readonly string _myTxtFileName;
+        private readonly string _companionTxtFileName;
 
         private ConnectionInfo _info;
 
@@ -36,8 +35,8 @@ namespace VaninChat2.Workers
             _companionName = companionName;
 
             _bin = SymbolShuffling(_myName, _companionName, CONTROL_STRING);
-            _myZipName = $"{SymbolShuffling(_myName, CONTROL_STRING)}.zip";
-            _companionZipName = $"{SymbolShuffling(_companionName, CONTROL_STRING)}.zip";
+            _myTxtFileName = $"{SymbolShuffling(_myName, CONTROL_STRING)}.txt";
+            _companionTxtFileName = $"{SymbolShuffling(_companionName, CONTROL_STRING)}.txt";
         }
 
         public async Task<bool> ExecuteAsync()
@@ -50,17 +49,17 @@ namespace VaninChat2.Workers
         private async Task<bool> SendMyInfoAsync()
             => await new ProxyWorker().ExecuteAsync(async (httpClient) =>
         {
-            using (var zipObj = new ZipWorker(CONTROL_STRING)
-                .CreateTxtFileAndPutToArchieve(_myZipName, "info.txt", _myPass))
+            using (var fileObj = new FileWorker()
+                .CreateEncryptedTxtFile(_myTxtFileName, $"[[[PASS:{_myPass}]]]"))
             {
                 using var requestContent = new MultipartFormDataContent();
 
-                using var content = new ByteArrayContent(zipObj.Bytes);
-                content.Headers.ContentType = new MediaTypeHeaderValue("application/zip");
-                httpClient.DefaultRequestHeaders.Add("filename", zipObj.Name);
-                requestContent.Add(content, zipObj.Name, zipObj.Name);
+                using var content = new ByteArrayContent(fileObj.Bytes);
+                content.Headers.ContentType = new MediaTypeHeaderValue("text/plain");
+                httpClient.DefaultRequestHeaders.Add("filename", fileObj.Name);
+                requestContent.Add(content, fileObj.Name, fileObj.Name);
 
-                var url = $"https://filebin.net/{_bin}/{zipObj.Name}";
+                var url = $"{API_URL}/{_bin}/{fileObj.Name}";
                 using var response = await httpClient.PostAsync(url, requestContent);
 
                 var responseContent = await response.Content.ReadAsStringAsync();
@@ -71,17 +70,16 @@ namespace VaninChat2.Workers
         private async Task<bool> WaitCompanionAsync()
             => await new ProxyWorker().ExecuteAsync(async (httpClient) =>
             {
-                var url = $"https://filebin.net/{_bin}";
-                httpClient.DefaultRequestHeaders.Add("bin", _bin);
+                var url = $"{API_URL}/{_bin}";
                 httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
                 using var response = await httpClient.GetAsync(url);
                 var responseContent = await response.Content.ReadAsStringAsync();
 
                 var files = JsonConvert.DeserializeObject<BinDto>(responseContent).files;
-                var companionZip = files.FirstOrDefault(x => x.filename.Equals(_companionZipName, StringComparison.OrdinalIgnoreCase));
+                var companionTxtFile = files.FirstOrDefault(x => x.filename.Equals(_companionTxtFileName, StringComparison.OrdinalIgnoreCase));
 
-                if (companionZip == null)
-                    throw new Exception("waiting for companion zip..");
+                if (companionTxtFile == null)
+                    throw new Exception("waiting for companion txt file..");
 
                 return true;
             });
@@ -89,29 +87,12 @@ namespace VaninChat2.Workers
         private async Task<bool> GetCompanionInfoAsync()
             => await new ProxyWorker().ExecuteAsync(async (httpClient) =>
             {
-                var url = $"https://filebin.net/{_bin}/{_companionZipName}";
-                httpClient.DefaultRequestHeaders.Add("bin", _bin);
+                var url = $"{API_URL}/{_bin}/{_myTxtFileName}";
                 httpClient.DefaultRequestHeaders.Add("Accept", "*/*");
                 using var response = await httpClient.GetAsync(url);
                 var bytes = await response.Content.ReadAsByteArrayAsync();
-                File.WriteAllBytes(_companionZipName, bytes);
 
-                /*using (var archive = new IronZipArchive(await response.Content.ReadAsByteArrayAsync(), CONTROL_STRING))
-                {
-                    var dir = Directory.GetCurrentDirectory().TrimEnd('\\', '/');
-                    archive.SaveAs(dir + "/" + _companionZipName);
-                }*/
-                
-                /*using (var fs = new FileStream(_companionZipName, FileMode.CreateNew))
-                {
-                    await response.Content.CopyToAsync(fs);
-                }*/
-
-                /*var files = JsonConvert.DeserializeObject<BinDto>(responseContent).files;
-                var companionZip = files.FirstOrDefault(x => x.filename.Equals(_companionName, StringComparison.OrdinalIgnoreCase));
-
-                if (companionZip == null)
-                    throw new Exception("waiting for companion zip..");*/
+                var result = new FileWorker().Decrypt(bytes);
 
                 return true;
             });

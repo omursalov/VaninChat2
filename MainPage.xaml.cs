@@ -95,12 +95,15 @@ namespace VaninChat2
             ConnectLabel.IsVisible = true;
             ConnectLabel.Text = "соединение..";
 
-            var passWorker = new ConnectionWorker(
+            var connectionWorker = new ConnectionWorker(
                 EDITOR_NAME.Text, EDITOR_PASS.Text, EDITOR_COMPANION_NAME.Text);
-            if (!await passWorker.ExecuteAsync())
+            if (!await connectionWorker.ExecuteAsync())
             {
                 ConnectLabel.IsVisible = false;
                 await DisplayAlert("Ошибка", "Не удалось соединиться", "OK");
+                EDITOR_NAME.IsEnabled = true;
+                EDITOR_PASS.IsEnabled = true;
+                EDITOR_COMPANION_NAME.IsEnabled = true;
                 CONNECT_BTN.IsEnabled = true;
                 return;
             }

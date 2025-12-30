@@ -6,10 +6,6 @@ C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-android\com.companyname.v
 C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-android\com.companyname.vaninchat2-Signed.aab
 C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-android\com.companyname.vaninchat2-Signed.apk
 C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-android\com.companyname.vaninchat2-Signed.apk.idsig
-C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-android\Microsoft.Maui.Controls.HotReload.Forms.dll
-C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-android\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
-C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-android\Microsoft.VisualStudio.DesignTools.TapContract.dll
-C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-android\Microsoft.VisualStudio.DesignTools.XamlTapContract.dll
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\.NETCoreApp,Version=v9.0.AssemblyAttributes.cs
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\build.props
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\adb.props
@@ -18,18 +14,8 @@ C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\VaninChat2.csproj
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\mauiimage.inputs
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\mauifont.inputs
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\mauisplash.inputs
-C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\resizetizer\sp\drawable-hdpi\splash.png
-C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\resizetizer\sp\drawable-mdpi\splash.png
-C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\resizetizer\sp\drawable-v31\maui_splash_image.xml
-C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\resizetizer\sp\drawable-xhdpi\splash.png
-C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\resizetizer\sp\drawable-xxhdpi\splash.png
-C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\resizetizer\sp\drawable-xxxhdpi\splash.png
-C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\resizetizer\sp\drawable\maui_splash_image.xml
-C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\resizetizer\sp\values\maui_colors.xml
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\mauisplash.stamp
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\mauifont.stamp
-C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\resizetizer\f\OpenSans-Regular.ttf
-C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\resizetizer\f\OpenSans-Semibold.ttf
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\resizetizer\r\drawable-hdpi\dotnet_bot.png
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\resizetizer\r\drawable-mdpi\dotnet_bot.png
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\resizetizer\r\drawable-xhdpi\dotnet_bot.png
@@ -64,7 +50,6 @@ C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\stamp\_BuildLibra
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\case_map.txt
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\__Microsoft.Android.Resource.Designer.cs
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\res.flag
-C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\resizetizer\6CD7C47F03026257-files.cache
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\resizetizer\B81013EDA07D2EB8-files.cache
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\lp\95\jl\files.cache
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\lp\96\jl\files.cache
@@ -131,7 +116,6 @@ C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\VaninChat2.Assemb
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\VaninChat2.AssemblyInfo.cs
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\VaninChat2.csproj.CoreCompileInputs.cache
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\XamlC.stamp
-C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\VaninChat2.csproj.Up2Date
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\VaninChat2.dll
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\VaninChat2.pdb
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\VaninChat2.genruntimeconfig.cache
@@ -177,7 +161,6 @@ C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\android\assets\x8
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Extensions.Options.dll
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Extensions.Primitives.dll
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Maui.Controls.dll
-C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Maui.Controls.HotReload.Forms.dll
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Maui.Controls.pdb
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Maui.Controls.Xaml.dll
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Maui.Controls.Xaml.pdb
@@ -189,9 +172,6 @@ C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\android\assets\x8
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Maui.pdb
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.VisualBasic.Core.dll
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.VisualBasic.dll
-C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
-C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.VisualStudio.DesignTools.TapContract.dll
-C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.VisualStudio.DesignTools.XamlTapContract.dll
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Win32.Primitives.dll
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Win32.Registry.dll
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\android\assets\x86_64\Mono.Android.dll
@@ -926,8 +906,6 @@ C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\android\src\mono\
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\android\src\mono\com\google\android\material\textfield\TextInputLayout_OnEndIconChangedListenerImplementor.java
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\android\src\mono\MonoPackageManager_Resources.java
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\assets\AboutAssets.txt
-C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\assets\OpenSans-Regular.ttf
-C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\assets\OpenSans-Semibold.ttf
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\android\bin\packaged_resources
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\android\src\com\companyname\vaninchat2\R.java
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\_CompileJava.FileList.txt
@@ -948,3 +926,5 @@ C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\stamp\_ConvertRes
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\stamp\_GenerateJavaStubs.stamp
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\VaninChat2.sourcelink.json
+C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-android\android\assets\x86_64\Newtonsoft.Json.dll
