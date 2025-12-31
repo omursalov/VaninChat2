@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VaninChat2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+ecf13b630b9cb3c78a0abe7f4b33bd4909af2050")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+9528fb34252b929efd7776ef2168caf56193b7fe")]
 [assembly: System.Reflection.AssemblyProductAttribute("VaninChat2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VaninChat2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

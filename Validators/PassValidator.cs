@@ -2,33 +2,33 @@
 
 namespace VaninChat2.Validators
 {
-    public class NameValidator
+    public class PassValidator
     {
-        public bool Check(string name, out string error)
+        public bool Check(string pass, out string error)
         {
             error = null;
 
-            if (string.IsNullOrEmpty(name))
+            if (string.IsNullOrEmpty(pass))
             {
                 error = "Заполните поле";
                 return false;
             }
 
-            if (name.Length < 4)
+            if (pass.Length < 8)
             {
-                error = "Минимум 4 символа";
+                error = "Минимум 8 символов";
                 return false;
             }
 
-            if (name.Any(Char.IsWhiteSpace))
+            if (pass.Any(Char.IsWhiteSpace))
             {
                 error = "Уберите пробелы";
                 return false;
             }
 
-            if (!Regex.IsMatch(name, @"^[a-zA-Z0-9]+$"))
+            if (Regex.IsMatch(pass, @"\p{IsCyrillic}"))
             {
-                error = "Только англ. буквы и цифры";
+                error = "Уберите русс. буквы";
                 return false;
             }
 

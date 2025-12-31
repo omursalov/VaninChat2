@@ -1,11 +1,13 @@
-﻿using System.Text;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 using VaninChat2.Workers.Crypto;
 
 namespace VaninChat2.Workers
 {
     public class MessageWorker
     {
+        private const string PREFIX = "[[[PASS:";
+        private const string POSTFIX = "]]]";
+
         private readonly CryptoWorker _cryptoWorker;
 
         public MessageWorker(CryptoWorker cryptoWorker)
@@ -13,12 +15,15 @@ namespace VaninChat2.Workers
             _cryptoWorker = cryptoWorker;
         }
 
-        public string DefinePassword(string pass) => $"[[[PASS:{pass}]]]";
+        public string DefinePassword(string pass)
+            => $"{PREFIX}{pass}{POSTFIX}";
 
         public string ExtractPassword(string value)
         {
             var lines = Regex.Split(value, "\r\n|\r|\n");
-            return _cryptoWorker.Decrypt(lines[4]);
+            return _cryptoWorker.Decrypt(lines[4])
+                .Replace(PREFIX, string.Empty)
+                .Replace(POSTFIX, string.Empty);
         }
     }
 }

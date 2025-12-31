@@ -23,10 +23,6 @@ namespace VaninChat2.Workers
 
         private FileObj _fileObj;
 
-        private ConnectionInfo _info;
-
-        public ConnectionInfo Info => _info;
-
         public ConnectionWorker(
             string myName, string myPass, string companionName)
         {
@@ -41,11 +37,15 @@ namespace VaninChat2.Workers
             _cryptoWorker = new CryptoWorker();
         }
 
-        public async Task<bool> ExecuteAsync()
-            => await SendMyInfoAsync()
-            ? await WaitCompanionAsync()
-            ? await GetCompanionInfoAsync()
-            : false : false;
+        public async Task<ConnectionInfo> ExecuteAsync()
+        {
+            if (await SendMyInfoAsync() && await WaitCompanionAsync())
+            {
+                return await GetCompanionInfoAsync();
+            }
+
+            return null;
+        }
 
         public void Dispose()
         {
@@ -53,34 +53,26 @@ namespace VaninChat2.Workers
             _cryptoWorker?.Dispose();
         }
 
-        public void CryptoTest()
-        {
-            var fs = File.Open("info.txt", FileMode.OpenOrCreate);
-            _cryptoWorker.Encrypt(fs, "TE(^%#@*&^*@%!#)(*)%!%asfgdafgdgdfsыпыпев");
-            fs.Close();
-            var res = _cryptoWorker.Decrypt(File.ReadAllText("info.txt"));
-        }
-
         #region Private
         private async Task<bool> SendMyInfoAsync()
             => await new ProxyWorker(attempts: 10, delaySec: 2).ExecuteAsync(async (httpClient) =>
-        {
-            var message = new MessageWorker(_cryptoWorker).DefinePassword(_myPass);
-            using (_fileObj = new FileWorker(_cryptoWorker).CreateEncryptedTxtFile(_myTxtFileName, message))
             {
-                using var requestContent = new MultipartFormDataContent();
-                using var content = new ByteArrayContent(_fileObj.Bytes);
-                content.Headers.ContentType = new MediaTypeHeaderValue("text/plain");
-                httpClient.DefaultRequestHeaders.Add("filename", _fileObj.Name);
-                requestContent.Add(content, _fileObj.Name, _fileObj.Name);
+                var message = new MessageWorker(_cryptoWorker).DefinePassword(_myPass);
+                using (_fileObj = new FileWorker(_cryptoWorker).CreateEncryptedTxtFile(_myTxtFileName, message))
+                {
+                    using var requestContent = new MultipartFormDataContent();
+                    using var content = new ByteArrayContent(_fileObj.Bytes);
+                    content.Headers.ContentType = new MediaTypeHeaderValue("text/plain");
+                    httpClient.DefaultRequestHeaders.Add("filename", _fileObj.Name);
+                    requestContent.Add(content, _fileObj.Name, _fileObj.Name);
 
-                var url = $"{API_URL}/{_bin}/{_fileObj.Name}";
-                using var response = await httpClient.PostAsync(url, requestContent);
+                    var url = $"{API_URL}/{_bin}/{_fileObj.Name}";
+                    using var response = await httpClient.PostAsync(url, requestContent);
 
-                var responseContent = await response.Content.ReadAsStringAsync();
-                return response.StatusCode == System.Net.HttpStatusCode.Created;
-            }
-        });
+                    var responseContent = await response.Content.ReadAsStringAsync();
+                    return response.StatusCode == System.Net.HttpStatusCode.Created;
+                }
+            });
 
         private async Task<bool> WaitCompanionAsync()
             => await new ProxyWorker(attempts: 120, delaySec: 5).ExecuteAsync(async (httpClient) =>
@@ -93,16 +85,21 @@ namespace VaninChat2.Workers
                 var files = JsonConvert.DeserializeObject<BinDto>(responseContent).files;
                 var companionTxtFile = files.FirstOrDefault(x => x.filename.Equals(_companionTxtFileName, StringComparison.OrdinalIgnoreCase));
 
-                if (1 != 1/*companionTxtFile == null*/)
+                if (companionTxtFile == null)
+                {
                     throw new Exception("waiting for companion txt file..");
+                }
 
                 return true;
             });
 
-        private async Task<bool> GetCompanionInfoAsync()
-            => await new ProxyWorker(attempts: 10, delaySec: 2).ExecuteAsync(async (httpClient) =>
+        private async Task<ConnectionInfo> GetCompanionInfoAsync()
+        {
+            string companionPass = null;
+
+            var result = await new ProxyWorker(attempts: 10, delaySec: 2).ExecuteAsync(async (httpClient) =>
             {
-                var url = $"{API_URL}/{_bin}/{_myTxtFileName}";
+                var url = $"{API_URL}/{_bin}/{_companionTxtFileName}";
                 httpClient.DefaultRequestHeaders.Add("Cookie", "verified=2024-05-24");
                 using var response = await httpClient.GetAsync(url);
 
@@ -112,10 +109,13 @@ namespace VaninChat2.Workers
                 }
 
                 var result = await response.Content.ReadAsStringAsync();
-                var companionPass = new MessageWorker(_cryptoWorker).ExtractPassword(result);
+                companionPass = new MessageWorker(_cryptoWorker).ExtractPassword(result);
 
                 return true;
             });
+
+            return result ? new ConnectionInfo(_myPass, companionPass) : null;
+        }
 
         private string SymbolShuffling(params string[] values)
         {

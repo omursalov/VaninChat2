@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace VaninChat2.Dto
+﻿namespace VaninChat2.Dto
 {
     public class ConnectionInfo
     {
-        private readonly string _commonPassword;
+        public string CommonPassword { get; }
+
+        public ConnectionInfo(params string[] values)
+        {
+            var characters = string.Concat(values).ToArray();
+            Array.Sort(characters);
+            CommonPassword = new string(characters);
+        }
     }
 }

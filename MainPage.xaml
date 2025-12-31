@@ -8,12 +8,10 @@
         Padding="30,0"
         Spacing="25">
             <Editor x:Name="EDITOR_NAME" Placeholder="ваше имя" AutoSize="TextChanges" />
-
-            <Editor x:Name="EDITOR_PASS" Placeholder="ваш пароль" AutoSize="TextChanges" />
-
+            <Entry x:Name="EDITOR_PASS" Placeholder="ваш пароль" IsPassword="True" Keyboard="Default" />
             <Editor x:Name="EDITOR_COMPANION_NAME" Placeholder="имя собеседника" AutoSize="TextChanges" />
 
-            <Editor x:Name="EDITOR_MESSAGE" Placeholder="ваше сообщение" AutoSize="TextChanges" MinimumHeightRequest="150" />
+            <Editor x:Name="EDITOR_MESSAGE" Placeholder="ваше сообщение" AutoSize="TextChanges" MinimumHeightRequest="150" IsVisible="false" />
 
             <Button
             x:Name="CONNECT_BTN"

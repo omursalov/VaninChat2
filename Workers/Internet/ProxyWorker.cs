@@ -26,14 +26,13 @@ namespace VaninChat2.Workers.Internet
 
             for (var i = 0; i < _attempts; i++)
             {
-                using var httpClientHandler = new HttpClientHandler
-                {
-                    Proxy = (await GetRandomAsync()).TryGetHttpProxy()
-                };
-                using var httpClient = new HttpClient(httpClientHandler);
-
                 try
                 {
+                    using var httpClientHandler = new HttpClientHandler
+                    {
+                        Proxy = (await GetRandomAsync()).TryGetHttpProxy()
+                    };
+                    using var httpClient = new HttpClient(httpClientHandler);
                     result = await funcAsync(httpClient);
                 }
                 catch (Exception ex)

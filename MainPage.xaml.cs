@@ -15,6 +15,7 @@ namespace VaninChat2
         protected override void OnAppearing()
         {
             base.OnAppearing();
+            EDITOR_PASS.Text = new PassWorker().Generate();
             EDITOR_MESSAGE.IsEnabled = false;
         }
 
@@ -25,65 +26,23 @@ namespace VaninChat2
             #region Validation
             var nameValidator = new NameValidator();
 
-            if (string.IsNullOrEmpty(EDITOR_NAME.Text))
+            if (!nameValidator.Check(EDITOR_NAME.Text, out var error))
             {
-                await DisplayAlert("Не заполнены обязательные поля", "Укажите имя", "OK");
+                await DisplayAlert("Некорректное имя", error, "OK");
                 CONNECT_BTN.IsEnabled = true;
                 return;
             }
 
-            if (!nameValidator.Check(EDITOR_NAME.Text))
+            if (!new PassValidator().Check(EDITOR_PASS.Text, out error))
             {
-                await DisplayAlert("Имя указано не верно", $"Уберите пробелы, переносы строк и символы {nameValidator.InvalidChars}", "OK");
+                await DisplayAlert("Некорректный пароль", error, "OK");
                 CONNECT_BTN.IsEnabled = true;
                 return;
             }
 
-            if (EDITOR_NAME.Text.Length < 4)
+            if (!nameValidator.Check(EDITOR_COMPANION_NAME.Text, out error))
             {
-                await DisplayAlert("Имя указано не верно", "Минимум 4 символа", "OK");
-                CONNECT_BTN.IsEnabled = true;
-                return;
-            }
-
-            if (string.IsNullOrEmpty(EDITOR_PASS.Text))
-            {
-                await DisplayAlert("Не заполнены обязательные поля", "Укажите пароль", "OK");
-                CONNECT_BTN.IsEnabled = true;
-                return;
-            }
-
-            if (EDITOR_PASS.Text.Any(x => Char.IsWhiteSpace(x)))
-            {
-                await DisplayAlert("Пароль указан не верно", "Уберите пробелы и переносы строк", "OK");
-                CONNECT_BTN.IsEnabled = true;
-                return;
-            }
-
-            if (EDITOR_PASS.Text.Length < 8)
-            {
-                await DisplayAlert("Пароль указан не верно", "Минимум 8 символов", "OK");
-                CONNECT_BTN.IsEnabled = true;
-                return;
-            }
-
-            if (string.IsNullOrEmpty(EDITOR_COMPANION_NAME.Text))
-            {
-                await DisplayAlert("Не заполнены обязательные поля", "Укажите имя собеседника", "OK");
-                CONNECT_BTN.IsEnabled = true;
-                return;
-            }
-
-            if (!nameValidator.Check(EDITOR_COMPANION_NAME.Text))
-            {
-                await DisplayAlert("Имя собеседника указано не верно", $"Уберите пробелы, переносы строк и символы {nameValidator.InvalidChars}", "OK");
-                CONNECT_BTN.IsEnabled = true;
-                return;
-            }
-
-            if (EDITOR_COMPANION_NAME.Text.Length < 4)
-            {
-                await DisplayAlert("Имя собеседника указано не верно", "Минимум 4 символа", "OK");
+                await DisplayAlert("Некорректное имя собеседника", error, "OK");
                 CONNECT_BTN.IsEnabled = true;
                 return;
             }
@@ -108,9 +67,9 @@ namespace VaninChat2
             var singleton = Singleton.Get();
             singleton.Add(new ConnectionWorker(EDITOR_NAME.Text, EDITOR_PASS.Text, EDITOR_COMPANION_NAME.Text));
 
-            singleton.Get<ConnectionWorker>().CryptoTest();
-
-            if (!await singleton.Get<ConnectionWorker>().ExecuteAsync())
+            var connectionInfo = await singleton.Get<ConnectionWorker>().ExecuteAsync();
+            
+            if (connectionInfo == null)
             {
                 ConnectLabel.IsVisible = false;
                 await DisplayAlert("Ошибка", "Не удалось соединиться", "OK");
@@ -122,7 +81,11 @@ namespace VaninChat2
                 return;
             }
 
-            ConnectLabel.Text = "соединение установлено";
+            singleton.DisposeAndClear();
+
+            singleton.Add(connectionInfo);
+
+            ConnectLabel.Text = $"соединение с {EDITOR_COMPANION_NAME.Text} установлено";
 
             CONNECT_BTN.Text = "отправить";
             CONNECT_BTN.IsEnabled = true;
