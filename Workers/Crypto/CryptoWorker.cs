@@ -1,6 +1,6 @@
 ﻿using CryptoNet;
 using System.Text;
-using VaninChat2.Dto;
+using VaninChat2.Models;
 
 namespace VaninChat2.Workers.Crypto
 {

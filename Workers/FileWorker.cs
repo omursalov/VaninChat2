@@ -1,4 +1,4 @@
-﻿using VaninChat2.Dto;
+﻿using VaninChat2.Models;
 using VaninChat2.Workers.Crypto;
 
 namespace VaninChat2.Workers

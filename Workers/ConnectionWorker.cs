@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Net.Http.Headers;
 using VaninChat2.Dto;
+using VaninChat2.Models;
 using VaninChat2.Workers.Crypto;
 using VaninChat2.Workers.Internet;
 
@@ -19,6 +20,7 @@ namespace VaninChat2.Workers
         private readonly string _myTxtFileName;
         private readonly string _companionTxtFileName;
 
+        private readonly ProxyWorker _proxyWorker;
         private readonly CryptoWorker _cryptoWorker;
 
         private FileObj _fileObj;
@@ -34,6 +36,7 @@ namespace VaninChat2.Workers
             _myTxtFileName = $"{SymbolShuffling(_myName, CONTROL_STRING)}.txt";
             _companionTxtFileName = $"{SymbolShuffling(_companionName, CONTROL_STRING)}.txt";
 
+            _proxyWorker = new ProxyWorker(attempts: 20, delaySec: 10, cacheMinutes: 10);
             _cryptoWorker = new CryptoWorker();
         }
 
@@ -55,7 +58,7 @@ namespace VaninChat2.Workers
 
         #region Private
         private async Task<bool> SendMyInfoAsync()
-            => await new ProxyWorker(attempts: 10, delaySec: 2).ExecuteAsync(async (httpClient) =>
+            => await _proxyWorker.ExecuteAsync(async (httpClient) =>
             {
                 var message = new MessageWorker(_cryptoWorker).DefinePassword(_myPass);
                 using (_fileObj = new FileWorker(_cryptoWorker).CreateEncryptedTxtFile(_myTxtFileName, message))
@@ -75,7 +78,7 @@ namespace VaninChat2.Workers
             });
 
         private async Task<bool> WaitCompanionAsync()
-            => await new ProxyWorker(attempts: 120, delaySec: 5).ExecuteAsync(async (httpClient) =>
+            => await _proxyWorker.ExecuteAsync(async (httpClient) =>
             {
                 var url = $"{API_URL}/{_bin}";
                 httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
@@ -97,7 +100,7 @@ namespace VaninChat2.Workers
         {
             string companionPass = null;
 
-            var result = await new ProxyWorker(attempts: 10, delaySec: 2).ExecuteAsync(async (httpClient) =>
+            var result = await _proxyWorker.ExecuteAsync(async (httpClient) =>
             {
                 var url = $"{API_URL}/{_bin}/{_companionTxtFileName}";
                 httpClient.DefaultRequestHeaders.Add("Cookie", "verified=2024-05-24");

@@ -296,3 +296,6 @@ C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-maccatalyst\maccatalyst-x
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\VaninChat2.pdb
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\VaninChat2.genruntimeconfig.cache
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\ref\VaninChat2.dll
+C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\CryptoNet.ExtShared.dll
+C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\CryptoNet.Models.dll
+C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\CryptoNet.dll
