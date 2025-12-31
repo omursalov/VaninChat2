@@ -12,7 +12,7 @@
         public string Generate()
         {
             var result = RoundDown(DateTime.UtcNow, TimeSpan.FromMinutes(_newEveryMinutes))
-                .ToString("yyyy-MM-dd-HH-mm-ss");
+                .ToString("yyyyMMddHHmmss");
             var chars = result.OrderBy(c => c).ToArray();
             return string.Join(string.Empty, chars);
         }

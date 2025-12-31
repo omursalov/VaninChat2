@@ -1,6 +1,6 @@
 ﻿using System.Net.NetworkInformation;
 
-namespace VaninChat2.Workers
+namespace VaninChat2.Workers.Internet
 {
     public class PingWorker
     {

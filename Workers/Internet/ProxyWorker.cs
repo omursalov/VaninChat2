@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using VaninChat2.Dto;
 
-namespace VaninChat2.Workers
+namespace VaninChat2.Workers.Internet
 {
     public class ProxyWorker
     {

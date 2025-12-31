@@ -2,6 +2,7 @@
 using System.Net.Http.Headers;
 using VaninChat2.Dto;
 using VaninChat2.Workers.Crypto;
+using VaninChat2.Workers.Internet;
 
 namespace VaninChat2.Workers
 {
@@ -50,6 +51,14 @@ namespace VaninChat2.Workers
         {
             _fileObj?.Dispose();
             _cryptoWorker?.Dispose();
+        }
+
+        public void CryptoTest()
+        {
+            var fs = File.Open("info.txt", FileMode.OpenOrCreate);
+            _cryptoWorker.Encrypt(fs, "TE(^%#@*&^*@%!#)(*)%!%asfgdafgdgdfsыпыпев");
+            fs.Close();
+            var res = _cryptoWorker.Decrypt(File.ReadAllText("info.txt"));
         }
 
         #region Private
