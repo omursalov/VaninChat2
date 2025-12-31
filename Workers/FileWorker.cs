@@ -1,4 +1,5 @@
-﻿using VaninChat2.Models;
+﻿using System.Text;
+using VaninChat2.Models;
 using VaninChat2.Workers.Crypto;
 
 namespace VaninChat2.Workers
@@ -19,9 +20,11 @@ namespace VaninChat2.Workers
 
             var result = new FileObj(fileName);
 
-            using (var fileStream = new FileStream(fileName, FileMode.OpenOrCreate))
+            using (var fs = new FileStream(fileName, FileMode.OpenOrCreate))
             {
-                _cryptoWorker.Encrypt(fileStream, content);
+                var encryptedText = _cryptoWorker.Encrypt(content);
+                var bytes = Encoding.UTF8.GetBytes(encryptedText);
+                fs.Write(bytes, 0, bytes.Length);
             }
 
             return result;

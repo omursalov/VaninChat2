@@ -46,7 +46,11 @@ namespace VaninChat2.Workers.Internet
                         Proxy = _cachedProxy
                     };
 
-                    using var httpClient = new HttpClient(httpClientHandler);
+                    using var httpClient = new HttpClient(httpClientHandler)
+                    {
+                        Timeout = TimeSpan.FromSeconds(10)
+                    };
+
                     result = await funcAsync(httpClient);
                 }
                 catch (Exception ex)

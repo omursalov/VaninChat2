@@ -1,54 +1,69 @@
-﻿using CryptoNet;
+﻿using System.Security.Cryptography;
 using System.Text;
-using VaninChat2.Models;
 
 namespace VaninChat2.Workers.Crypto
 {
-    public class CryptoWorker : IDisposable
+    public class CryptoWorker
     {
-        private const string CONTROL_STRING = "nBfvubZ6Nggh76wwQzEy6L6gxQ4eWw";
+        private readonly Encoding _encoding;
 
-        private readonly FileObj _privateKeyFileObj;
-        private readonly FileObj _publicKeyFileObj;
+        private readonly string _passPhrase;
+        private readonly string _saltValue;
+        private readonly string _hashAlgorithm;
+        private readonly int _passwordIterations;
+        private readonly string _initVector;
+        private readonly int _keySize;
 
-        private readonly ICryptoNetRsa _cryptoNetRsa;
-
-        public CryptoWorker()
+        public CryptoWorker(string passPhrase, string saltValue,
+            string hashAlgorithm, int passwordIterations,
+            string initVector, int keySize)
         {
-            var key = new KeyWorker().Generate();
-
-            _cryptoNetRsa = new CryptoNetRsa();
-
-            _privateKeyFileObj = new FileObj($"{key}{CONTROL_STRING}");
-            _publicKeyFileObj = new FileObj(key);
-
-            _cryptoNetRsa.SaveKey(_privateKeyFileObj.FileInfo, true);
-            _cryptoNetRsa.SaveKey(_publicKeyFileObj.FileInfo, false);
+            _encoding = Encoding.UTF8;
+            _passPhrase = passPhrase;
+            _saltValue = saltValue;
+            _hashAlgorithm = hashAlgorithm;
+            _passwordIterations = passwordIterations;
+            _initVector = initVector;
+            _keySize = keySize;
         }
 
-        public void Encrypt(FileStream fs, string value)
+        public string Encrypt(string text)
         {
-            var bytes = _cryptoNetRsa.EncryptFromString(value);
-            var res = BitConverter.ToString(bytes);
-            bytes = Encoding.UTF8.GetBytes(res);
-            fs.Write(bytes, 0, bytes.Length);
+            var initVectorBytes = _encoding.GetBytes(_initVector);
+            var saltValueBytes = _encoding.GetBytes(_saltValue);
+            var textBytes = _encoding.GetBytes(text);
+            using var password = new PasswordDeriveBytes(_passPhrase, saltValueBytes, _hashAlgorithm, _passwordIterations);
+            var keyBytes = password.GetBytes(_keySize / 8);
+            using var symmetricKey = new RijndaelManaged();
+            symmetricKey.Mode = CipherMode.CBC;
+            using var encryptor = symmetricKey.CreateEncryptor(keyBytes, initVectorBytes);
+            using var memoryStream = new MemoryStream();
+            using var cryptoStream = new CryptoStream(memoryStream, encryptor, CryptoStreamMode.Write);
+            cryptoStream.Write(textBytes, 0, textBytes.Length);
+            cryptoStream.FlushFinalBlock();
+            var resultBytes = memoryStream.ToArray();
+            memoryStream.Close();
+            cryptoStream.Close();
+            return Convert.ToBase64String(resultBytes);
         }
 
-        public string Decrypt(string value)
+        public string Decrypt(string text)
         {
-            var arr = value.Split('-');
-            var array = new byte[arr.Length];
-
-            for (var i = 0; i < arr.Length; i++)
-                array[i] = Convert.ToByte(arr[i], 16);
-
-            return _cryptoNetRsa.DecryptToString(array);
-        }
-
-        public void Dispose()
-        {
-            _privateKeyFileObj?.Dispose();
-            _publicKeyFileObj?.Dispose();
+            var initVectorBytes = _encoding.GetBytes(_initVector);
+            var saltValueBytes = _encoding.GetBytes(_saltValue);
+            var textBytes = Convert.FromBase64String(text);
+            using var password = new PasswordDeriveBytes(_passPhrase, saltValueBytes, _hashAlgorithm, _passwordIterations);
+            var keyBytes = password.GetBytes(_keySize / 8);
+            using var symmetricKey = new RijndaelManaged();
+            symmetricKey.Mode = CipherMode.CBC;
+            using var decryptor = symmetricKey.CreateDecryptor(keyBytes, initVectorBytes);
+            using var memoryStream = new MemoryStream(textBytes);
+            using var cryptoStream = new CryptoStream(memoryStream, decryptor, CryptoStreamMode.Read);
+            var resultBytes = new byte[textBytes.Length];
+            var decryptedByteCount = cryptoStream.Read(resultBytes, 0, resultBytes.Length);
+            memoryStream.Close();
+            cryptoStream.Close();
+            return _encoding.GetString(resultBytes, 0, decryptedByteCount);
         }
     }
 }

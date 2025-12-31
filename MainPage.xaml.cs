@@ -1,6 +1,7 @@
 ﻿using VaninChat2.Common;
 using VaninChat2.Validators;
 using VaninChat2.Workers;
+using VaninChat2.Workers.Crypto;
 using VaninChat2.Workers.Internet;
 
 namespace VaninChat2
@@ -68,7 +69,7 @@ namespace VaninChat2
             singleton.Add(new ConnectionWorker(EDITOR_NAME.Text, EDITOR_PASS.Text, EDITOR_COMPANION_NAME.Text));
 
             var connectionInfo = await singleton.Get<ConnectionWorker>().ExecuteAsync();
-            
+
             if (connectionInfo == null)
             {
                 ConnectLabel.IsVisible = false;

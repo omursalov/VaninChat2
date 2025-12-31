@@ -37,10 +37,19 @@ namespace VaninChat2.Workers
             _companionTxtFileName = $"{SymbolShuffling(_companionName, CONTROL_STRING)}.txt";
 
             _proxyWorker = new ProxyWorker(attempts: 20, delaySec: 10, cacheMinutes: 10);
-            _cryptoWorker = new CryptoWorker();
+
+            var passPhrase = CONTROL_STRING;
+            var saltValue = new SaltWorker().Generate();
+            var hashAlgorithm = "SHA256";
+            var passwordIterations = 2;
+            var initVector = "!1A3g2D4s9K556g7";
+            var keySize = 256;
+
+            _cryptoWorker = new CryptoWorker(passPhrase, saltValue,
+                hashAlgorithm, passwordIterations, initVector, keySize);
         }
 
-        public async Task<ConnectionInfo> ExecuteAsync()
+        public async Task<ConnectionInfo?> ExecuteAsync()
         {
             if (await SendMyInfoAsync() && await WaitCompanionAsync())
             {
@@ -53,7 +62,6 @@ namespace VaninChat2.Workers
         public void Dispose()
         {
             _fileObj?.Dispose();
-            _cryptoWorker?.Dispose();
         }
 
         #region Private
@@ -88,7 +96,7 @@ namespace VaninChat2.Workers
                 var files = JsonConvert.DeserializeObject<BinDto>(responseContent).files;
                 var companionTxtFile = files.FirstOrDefault(x => x.filename.Equals(_companionTxtFileName, StringComparison.OrdinalIgnoreCase));
 
-                if (companionTxtFile == null)
+                if (/*companionTxtFile == null*/1 != 1)
                 {
                     throw new Exception("waiting for companion txt file..");
                 }
@@ -96,13 +104,13 @@ namespace VaninChat2.Workers
                 return true;
             });
 
-        private async Task<ConnectionInfo> GetCompanionInfoAsync()
+        private async Task<ConnectionInfo?> GetCompanionInfoAsync()
         {
             string companionPass = null;
 
             var result = await _proxyWorker.ExecuteAsync(async (httpClient) =>
             {
-                var url = $"{API_URL}/{_bin}/{_companionTxtFileName}";
+                var url = $"{API_URL}/{_bin}/{_myTxtFileName}"; // _companion
                 httpClient.DefaultRequestHeaders.Add("Cookie", "verified=2024-05-24");
                 using var response = await httpClient.GetAsync(url);
 
@@ -117,7 +125,7 @@ namespace VaninChat2.Workers
                 return true;
             });
 
-            return result ? new ConnectionInfo(_myPass, companionPass) : null;
+            return result ? new ConnectionInfo(_myName, _companionName, _bin, _myPass, companionPass) : null;
         }
 
         private string SymbolShuffling(params string[] values)

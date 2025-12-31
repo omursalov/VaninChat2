@@ -2,7 +2,7 @@
 {
     public class PassWorker
     {
-        private const string characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#@$%^&*()-+<>?";
+        private const string characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#@$%^&*()-+<>?=";
 
         public string Generate(int length = 16)
         {

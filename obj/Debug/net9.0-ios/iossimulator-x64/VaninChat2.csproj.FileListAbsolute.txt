@@ -1,6 +1,9 @@
 C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\VaninChat2.runtimeconfig.json
 C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\VaninChat2.dll
 C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\VaninChat2.pdb
+C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\CryptoNet.ExtShared.dll
+C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\CryptoNet.Models.dll
+C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\CryptoNet.dll
 C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\Microsoft.Extensions.Configuration.dll
 C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\Microsoft.Extensions.DependencyInjection.dll
@@ -16,6 +19,9 @@ C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\Micr
 C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\Microsoft.Maui.Essentials.dll
 C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\Microsoft.Maui.Graphics.dll
 C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\Newtonsoft.Json.dll
+C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\System.IO.Pipelines.dll
+C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\System.Text.Encodings.Web.dll
+C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\System.Text.Json.dll
 C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\ar\Microsoft.Maui.Controls.resources.dll
 C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\ca\Microsoft.Maui.Controls.resources.dll
 C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\cs\Microsoft.Maui.Controls.resources.dll
@@ -103,7 +109,6 @@ C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\Syst
 C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\System.IO.FileSystem.dll
 C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\System.IO.IsolatedStorage.dll
 C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\System.IO.MemoryMappedFiles.dll
-C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\System.IO.Pipelines.dll
 C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\System.IO.Pipes.AccessControl.dll
 C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\System.IO.Pipes.dll
 C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\System.IO.UnmanagedMemoryStream.dll
@@ -186,8 +191,6 @@ C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\Syst
 C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\System.Text.Encoding.CodePages.dll
 C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\System.Text.Encoding.Extensions.dll
 C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\System.Text.Encoding.dll
-C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\System.Text.Encodings.Web.dll
-C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\System.Text.Json.dll
 C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\System.Text.RegularExpressions.dll
 C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\System.Threading.Channels.dll
 C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\System.Threading.Overlapped.dll
@@ -308,6 +311,3 @@ C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-ios\iossimulator-x64\refi
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-ios\iossimulator-x64\VaninChat2.pdb
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-ios\iossimulator-x64\VaninChat2.genruntimeconfig.cache
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-ios\iossimulator-x64\ref\VaninChat2.dll
-C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\CryptoNet.ExtShared.dll
-C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\CryptoNet.Models.dll
-C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-ios\iossimulator-x64\CryptoNet.dll
