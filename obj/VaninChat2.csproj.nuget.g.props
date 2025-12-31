@@ -13,6 +13,46 @@
     <SourceRoot Include="C:\Users\user\.nuget\packages\" />
     <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
   </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net9.0-android' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Content Include="$(NuGetPackageRoot)cryptonet\3.4.3\contentFiles\any\netstandard2.0\CryptoNetLogo-icon.ico" Condition="Exists('$(NuGetPackageRoot)cryptonet\3.4.3\contentFiles\any\netstandard2.0\CryptoNetLogo-icon.ico')">
+      <NuGetPackageId>CryptoNet</NuGetPackageId>
+      <NuGetPackageVersion>3.4.3</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>CryptoNetLogo-icon.ico</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net9.0-ios' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Content Include="$(NuGetPackageRoot)cryptonet\3.4.3\contentFiles\any\netstandard2.0\CryptoNetLogo-icon.ico" Condition="Exists('$(NuGetPackageRoot)cryptonet\3.4.3\contentFiles\any\netstandard2.0\CryptoNetLogo-icon.ico')">
+      <NuGetPackageId>CryptoNet</NuGetPackageId>
+      <NuGetPackageVersion>3.4.3</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>CryptoNetLogo-icon.ico</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net9.0-maccatalyst' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Content Include="$(NuGetPackageRoot)cryptonet\3.4.3\contentFiles\any\netstandard2.0\CryptoNetLogo-icon.ico" Condition="Exists('$(NuGetPackageRoot)cryptonet\3.4.3\contentFiles\any\netstandard2.0\CryptoNetLogo-icon.ico')">
+      <NuGetPackageId>CryptoNet</NuGetPackageId>
+      <NuGetPackageVersion>3.4.3</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>CryptoNetLogo-icon.ico</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net9.0-windows10.0.19041.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Content Include="$(NuGetPackageRoot)cryptonet\3.4.3\contentFiles\any\netstandard2.0\CryptoNetLogo-icon.ico" Condition="Exists('$(NuGetPackageRoot)cryptonet\3.4.3\contentFiles\any\netstandard2.0\CryptoNetLogo-icon.ico')">
+      <NuGetPackageId>CryptoNet</NuGetPackageId>
+      <NuGetPackageVersion>3.4.3</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>CryptoNetLogo-icon.ico</Link>
+    </Content>
+  </ItemGroup>
   <ImportGroup Condition=" '$(TargetFramework)' == 'net9.0-android' AND '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)microsoft.net.illink.tasks\9.0.11\build\Microsoft.NET.ILLink.Tasks.props" Condition="Exists('$(NuGetPackageRoot)microsoft.net.illink.tasks\9.0.11\build\Microsoft.NET.ILLink.Tasks.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.maui.resizetizer\9.0.111\buildTransitive\Microsoft.Maui.Resizetizer.props" Condition="Exists('$(NuGetPackageRoot)microsoft.maui.resizetizer\9.0.111\buildTransitive\Microsoft.Maui.Resizetizer.props')" />

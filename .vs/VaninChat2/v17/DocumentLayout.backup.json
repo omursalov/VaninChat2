@@ -3,49 +3,50 @@
   "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\VaninChat2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|c:\\users\\user\\source\\repos\\vaninchat2\\workers\\fileworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|solutionrelative:workers\\fileworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|c:\\users\\user\\source\\repos\\vaninchat2\\workers\\connectionworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|solutionrelative:workers\\connectionworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|c:\\users\\user\\source\\repos\\vaninchat2\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|solutionrelative:mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|c:\\users\\user\\source\\repos\\vaninchat2\\workers\\cryptoworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|solutionrelative:workers\\cryptoworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|c:\\users\\user\\source\\repos\\vaninchat2\\workers\\pingworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|solutionrelative:workers\\pingworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|c:\\users\\user\\source\\repos\\vaninchat2\\validators\\namevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|solutionrelative:validators\\namevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|c:\\users\\user\\source\\repos\\vaninchat2\\workers\\proxyworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|solutionrelative:workers\\proxyworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|c:\\users\\user\\source\\repos\\vaninchat2\\workers\\connectionworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|solutionrelative:workers\\connectionworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\AppData\\Local\\Temp\\VSGeneratedDocuments\\0af369a9-c277-5698-1a23-3c69944f0b0e\\MainPage.xaml.sg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|c:\\users\\user\\source\\repos\\vaninchat2\\workers\\crypto\\cryptoworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|solutionrelative:workers\\crypto\\cryptoworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|c:\\users\\user\\source\\repos\\vaninchat2\\workers\\fileworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|solutionrelative:workers\\fileworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|c:\\users\\user\\source\\repos\\vaninchat2\\workers\\crypto\\keyworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|solutionrelative:workers\\crypto\\keyworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|c:\\users\\user\\source\\repos\\vaninchat2\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|solutionrelative:mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|c:\\users\\user\\source\\repos\\vaninchat2\\dto\\proxyitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|solutionrelative:dto\\proxyitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|c:\\users\\user\\source\\repos\\vaninchat2\\common\\singleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|solutionrelative:common\\singleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\.nuget\\packages\\ironzip\\2025.12.1\\readme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\AppData\\Local\\Temp\\VSGeneratedDocuments\\0af369a9-c277-5698-1a23-3c69944f0b0e\\MainPage.xaml.sg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|c:\\users\\user\\source\\repos\\vaninchat2\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|solutionrelative:mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\.nuget\\packages\\ironzip\\2025.12.1\\readme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|c:\\users\\user\\source\\repos\\vaninchat2\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -63,156 +64,163 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CryptoWorker.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\Workers\\CryptoWorker.cs",
-              "RelativeDocumentMoniker": "Workers\\CryptoWorker.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\Workers\\CryptoWorker.cs",
-              "RelativeToolTip": "Workers\\CryptoWorker.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-30T14:48:27.701Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FileWorker.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\Workers\\FileWorker.cs",
-              "RelativeDocumentMoniker": "Workers\\FileWorker.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\Workers\\FileWorker.cs",
-              "RelativeToolTip": "Workers\\FileWorker.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-30T14:48:02.924Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Microsoft.Common.CurrentVersion.targets",
-              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ViewState": "AgIAAP0UAAAAAAAAAAAmwAsVAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2025-12-29T23:25:18.239Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ProxyWorker.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\Workers\\ProxyWorker.cs",
-              "RelativeDocumentMoniker": "Workers\\ProxyWorker.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\Workers\\ProxyWorker.cs",
-              "RelativeToolTip": "Workers\\ProxyWorker.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAawBkAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-29T23:02:30.965Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ConnectionWorker.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\Workers\\ConnectionWorker.cs",
-              "RelativeDocumentMoniker": "Workers\\ConnectionWorker.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\Workers\\ConnectionWorker.cs",
-              "RelativeToolTip": "Workers\\ConnectionWorker.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAvwF4AAAAwAAAAAAAAAA==",
+              "Title": "PingWorker.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\Workers\\PingWorker.cs",
+              "RelativeDocumentMoniker": "Workers\\PingWorker.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\Workers\\PingWorker.cs",
+              "RelativeToolTip": "Workers\\PingWorker.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-29T21:20:16.874Z",
+              "WhenOpened": "2025-12-31T14:21:03.721Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "MauiProgram.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\MauiProgram.cs",
-              "RelativeDocumentMoniker": "MauiProgram.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\MauiProgram.cs",
-              "RelativeToolTip": "MauiProgram.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-29T16:14:40.729Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MainPage.xaml",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\MainPage.xaml",
-              "RelativeDocumentMoniker": "MainPage.xaml",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\MainPage.xaml",
-              "RelativeToolTip": "MainPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-29T16:00:12.406Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ProxyItem.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\Dto\\ProxyItem.cs",
-              "RelativeDocumentMoniker": "Dto\\ProxyItem.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\Dto\\ProxyItem.cs",
-              "RelativeToolTip": "Dto\\ProxyItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-28T19:09:06.967Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Singleton.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\Common\\Singleton.cs",
-              "RelativeDocumentMoniker": "Common\\Singleton.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\Common\\Singleton.cs",
-              "RelativeToolTip": "Common\\Singleton.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-28T18:41:54.44Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "MainPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\MainPage.xaml.cs",
-              "RelativeDocumentMoniker": "MainPage.xaml.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\MainPage.xaml.cs",
-              "RelativeToolTip": "MainPage.xaml.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAgwGMAAAArAAAAAAAAAA==",
+              "Title": "NameValidator.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\Validators\\NameValidator.cs",
+              "RelativeDocumentMoniker": "Validators\\NameValidator.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\Validators\\NameValidator.cs",
+              "RelativeToolTip": "Validators\\NameValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-28T17:58:56.715Z",
+              "WhenOpened": "2025-12-31T13:46:02.527Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "MainPage.xaml.sg.cs",
-              "DocumentMoniker": "C:\\Users\\user\\AppData\\Local\\Temp\\VSGeneratedDocuments\\0af369a9-c277-5698-1a23-3c69944f0b0e\\MainPage.xaml.sg.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\VSGeneratedDocuments\\0af369a9-c277-5698-1a23-3c69944f0b0e\\MainPage.xaml.sg.cs",
-              "ToolTip": "MainPage.xaml.sg.cs [\u0441\u043E\u0437\u0434\u0430\u043D \u0433\u0435\u043D\u0435\u0440\u0430\u0442\u043E\u0440\u043E\u043C Microsoft.Maui.Controls.SourceGen.CodeBehindGenerator]",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAWAAAAAAAAAA==",
+              "Title": "FileWorker.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\Workers\\FileWorker.cs",
+              "RelativeDocumentMoniker": "Workers\\FileWorker.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\Workers\\FileWorker.cs",
+              "RelativeToolTip": "Workers\\FileWorker.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA4AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "OverriddenToolTip": "MainPage.xaml.sg.cs [\u0441\u043E\u0437\u0434\u0430\u043D \u0433\u0435\u043D\u0435\u0440\u0430\u0442\u043E\u0440\u043E\u043C Microsoft.Maui.Controls.SourceGen.CodeBehindGenerator]",
-              "WhenOpened": "2025-12-29T21:14:43.351Z"
+              "WhenOpened": "2025-12-31T13:38:54.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ConnectionWorker.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\Workers\\ConnectionWorker.cs",
+              "RelativeDocumentMoniker": "Workers\\ConnectionWorker.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\Workers\\ConnectionWorker.cs",
+              "RelativeToolTip": "Workers\\ConnectionWorker.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAwwGgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T13:38:33.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CryptoWorker.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\Workers\\Crypto\\CryptoWorker.cs",
+              "RelativeDocumentMoniker": "Workers\\Crypto\\CryptoWorker.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\Workers\\Crypto\\CryptoWorker.cs",
+              "RelativeToolTip": "Workers\\Crypto\\CryptoWorker.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAApwCMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T13:38:43.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "KeyWorker.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\Workers\\Crypto\\KeyWorker.cs",
+              "RelativeDocumentMoniker": "Workers\\Crypto\\KeyWorker.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\Workers\\Crypto\\KeyWorker.cs",
+              "RelativeToolTip": "Workers\\Crypto\\KeyWorker.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T13:22:57.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\MainPage.xaml.cs",
+              "RelativeToolTip": "MainPage.xaml.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAgwF0AAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T19:11:36.318Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "MauiProgram.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\MauiProgram.cs",
+              "RelativeToolTip": "MauiProgram.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T16:14:40.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\MainPage.xaml",
+              "RelativeDocumentMoniker": "MainPage.xaml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\MainPage.xaml",
+              "RelativeToolTip": "MainPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-29T16:00:12.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProxyWorker.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\Workers\\ProxyWorker.cs",
+              "RelativeDocumentMoniker": "Workers\\ProxyWorker.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\Workers\\ProxyWorker.cs",
+              "RelativeToolTip": "Workers\\ProxyWorker.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T16:53:02.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MainPage.xaml.sg.cs",
+              "DocumentMoniker": "C:\\Users\\user\\AppData\\Local\\Temp\\VSGeneratedDocuments\\0af369a9-c277-5698-1a23-3c69944f0b0e\\MainPage.xaml.sg.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\VSGeneratedDocuments\\0af369a9-c277-5698-1a23-3c69944f0b0e\\MainPage.xaml.sg.cs",
+              "ToolTip": "MainPage.xaml.sg.cs [\u0441\u043E\u0437\u0434\u0430\u043D \u0433\u0435\u043D\u0435\u0440\u0430\u0442\u043E\u0440\u043E\u043C Microsoft.Maui.Controls.SourceGen.CodeBehindGenerator]",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "OverriddenToolTip": "MainPage.xaml.sg.cs [\u0441\u043E\u0437\u0434\u0430\u043D \u0433\u0435\u043D\u0435\u0440\u0430\u0442\u043E\u0440\u043E\u043C Microsoft.Maui.Controls.SourceGen.CodeBehindGenerator]",
+              "WhenOpened": "2025-12-29T21:14:43.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "readme.txt",
               "DocumentMoniker": "C:\\Users\\user\\.nuget\\packages\\ironzip\\2025.12.1\\readme.txt",
               "RelativeDocumentMoniker": "..\\..\\..\\.nuget\\packages\\ironzip\\2025.12.1\\readme.txt",
               "ToolTip": "C:\\Users\\user\\.nuget\\packages\\ironzip\\2025.12.1\\readme.txt",
               "RelativeToolTip": "..\\..\\..\\.nuget\\packages\\ironzip\\2025.12.1\\readme.txt",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABgAAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAABBwBgAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-12-29T17:19:41.286Z"
+              "WhenOpened": "2025-12-29T17:19:41.286Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -224,7 +232,8 @@
               "RelativeToolTip": "App.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-28T17:58:45.185Z"
+              "WhenOpened": "2025-12-28T17:58:45.185Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -236,7 +245,8 @@
               "RelativeToolTip": "App.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-28T17:58:42.826Z"
+              "WhenOpened": "2025-12-28T17:58:42.826Z",
+              "EditorCaption": ""
             }
           ]
         }

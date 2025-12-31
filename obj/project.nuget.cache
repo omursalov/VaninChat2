@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "DslXTu/Xkhc=",
+  "dgSpecHash": "pN+gNBi6L4o=",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\source\\repos\\VaninChat2\\VaninChat2.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\cryptonet\\3.4.3\\cryptonet.3.4.3.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\googlegson\\2.13.0.1\\googlegson.2.13.0.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.8\\microsoft.extensions.configuration.9.0.8.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.8\\microsoft.extensions.configuration.abstractions.9.0.8.nupkg.sha512",
@@ -30,6 +31,9 @@
     "C:\\Users\\user\\.nuget\\packages\\microsoft.windows.sdk.buildtools\\10.0.22621.756\\microsoft.windows.sdk.buildtools.10.0.22621.756.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.windowsappsdk\\1.7.250606001\\microsoft.windowsappsdk.1.7.250606001.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\newtonsoft.json\\13.0.4\\newtonsoft.json.13.0.4.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\system.io.pipelines\\10.0.0\\system.io.pipelines.10.0.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\system.text.encodings.web\\10.0.0\\system.text.encodings.web.10.0.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\system.text.json\\10.0.0\\system.text.json.10.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\xamarin.android.glide\\4.16.0.12\\xamarin.android.glide.4.16.0.12.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\xamarin.android.glide.annotations\\4.16.0.12\\xamarin.android.glide.annotations.4.16.0.12.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\xamarin.android.glide.disklrucache\\4.16.0.12\\xamarin.android.glide.disklrucache.4.16.0.12.nupkg.sha512",

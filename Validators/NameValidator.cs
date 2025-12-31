@@ -1,12 +1,10 @@
-﻿using System.Linq;
-
-namespace VaninChat2.Validators
+﻿namespace VaninChat2.Validators
 {
     public class NameValidator
     {
         private readonly char[] _invalidChars = new[]
         {
-            ':', '&', ';', '|', '*', '?', '"', '(', ')', '$', '<', '>', '{', '}', '^', '#', '\\', '%', '!', '`'
+            ':', '&', ';', '|', '*', '?', '"', '(', ')', '$', '<', '>', '{', '}', '^', '#', '\\', '%', '!', '`', '-'
         };
 
         public string InvalidChars => string.Join(string.Empty, _invalidChars);

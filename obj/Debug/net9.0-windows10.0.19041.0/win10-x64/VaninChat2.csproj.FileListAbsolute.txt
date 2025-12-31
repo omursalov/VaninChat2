@@ -515,3 +515,10 @@ C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-windows10.0.19041.0\win10
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Newtonsoft.Json.dll
 C:\Users\user\source\repos\VaninChat2\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\VaninChat2.sourcelink.json
+C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\CryptoNetLogo-icon.ico
+C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\CryptoNet.ExtShared.dll
+C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\CryptoNet.Models.dll
+C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\CryptoNet.dll
+C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\System.IO.Pipelines.dll
+C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\System.Text.Encodings.Web.dll
+C:\Users\user\source\repos\VaninChat2\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\System.Text.Json.dll

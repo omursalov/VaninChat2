@@ -2,6 +2,41 @@
   "version": 3,
   "targets": {
     "net9.0-android35.0": {
+      "CryptoNet/3.4.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Json": "10.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "contentFiles": {
+          "contentFiles/any/netstandard2.0/CryptoNetLogo-icon.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "GoogleGson/2.13.0.1": {
         "type": "package",
         "dependencies": {
@@ -440,6 +475,68 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.IO.Pipelines/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Encodings.Web/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll": {
+            "assetType": "runtime",
+            "rid": "browser"
+          },
+          "runtimes/win/lib/net9.0/System.Text.Encodings.Web.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Text.Json/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Pipelines": "10.0.0",
+          "System.Text.Encodings.Web": "10.0.0"
+        },
+        "compile": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/System.Text.Json.targets": {}
         }
       },
       "Xamarin.Android.Glide/4.16.0.12": {
@@ -2309,6 +2406,41 @@
       }
     },
     "net9.0-android35.0/android-arm64": {
+      "CryptoNet/3.4.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Json": "10.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "contentFiles": {
+          "contentFiles/any/netstandard2.0/CryptoNetLogo-icon.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "GoogleGson/2.13.0.1": {
         "type": "package",
         "dependencies": {
@@ -2747,6 +2879,58 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.IO.Pipelines/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Encodings.Web/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Json/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Pipelines": "10.0.0",
+          "System.Text.Encodings.Web": "10.0.0"
+        },
+        "compile": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/System.Text.Json.targets": {}
         }
       },
       "Xamarin.Android.Glide/4.16.0.12": {
@@ -4616,6 +4800,41 @@
       }
     },
     "net9.0-android35.0/android-x64": {
+      "CryptoNet/3.4.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Json": "10.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "contentFiles": {
+          "contentFiles/any/netstandard2.0/CryptoNetLogo-icon.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "GoogleGson/2.13.0.1": {
         "type": "package",
         "dependencies": {
@@ -5054,6 +5273,58 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.IO.Pipelines/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Encodings.Web/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Json/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Pipelines": "10.0.0",
+          "System.Text.Encodings.Web": "10.0.0"
+        },
+        "compile": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/System.Text.Json.targets": {}
         }
       },
       "Xamarin.Android.Glide/4.16.0.12": {
@@ -6923,6 +7194,41 @@
       }
     },
     "net9.0-android35.0/iossimulator-x64": {
+      "CryptoNet/3.4.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Json": "10.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "contentFiles": {
+          "contentFiles/any/netstandard2.0/CryptoNetLogo-icon.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "GoogleGson/2.13.0.1": {
         "type": "package",
         "dependencies": {
@@ -7361,6 +7667,58 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.IO.Pipelines/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Encodings.Web/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Json/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Pipelines": "10.0.0",
+          "System.Text.Encodings.Web": "10.0.0"
+        },
+        "compile": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/System.Text.Json.targets": {}
         }
       },
       "Xamarin.Android.Glide/4.16.0.12": {
@@ -9230,6 +9588,41 @@
       }
     },
     "net9.0-android35.0/maccatalyst-x64": {
+      "CryptoNet/3.4.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Json": "10.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "contentFiles": {
+          "contentFiles/any/netstandard2.0/CryptoNetLogo-icon.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "GoogleGson/2.13.0.1": {
         "type": "package",
         "dependencies": {
@@ -9668,6 +10061,58 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.IO.Pipelines/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Encodings.Web/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Json/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Pipelines": "10.0.0",
+          "System.Text.Encodings.Web": "10.0.0"
+        },
+        "compile": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/System.Text.Json.targets": {}
         }
       },
       "Xamarin.Android.Glide/4.16.0.12": {
@@ -11537,6 +11982,41 @@
       }
     },
     "net9.0-android35.0/win10-x64": {
+      "CryptoNet/3.4.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Json": "10.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "contentFiles": {
+          "contentFiles/any/netstandard2.0/CryptoNetLogo-icon.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "GoogleGson/2.13.0.1": {
         "type": "package",
         "dependencies": {
@@ -11975,6 +12455,58 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.IO.Pipelines/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Encodings.Web/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Json/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Pipelines": "10.0.0",
+          "System.Text.Encodings.Web": "10.0.0"
+        },
+        "compile": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/System.Text.Json.targets": {}
         }
       },
       "Xamarin.Android.Glide/4.16.0.12": {
@@ -13844,6 +14376,41 @@
       }
     },
     "net9.0-ios26.0": {
+      "CryptoNet/3.4.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Json": "10.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "contentFiles": {
+          "contentFiles/any/netstandard2.0/CryptoNetLogo-icon.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.8": {
         "type": "package",
         "dependencies": {
@@ -14255,10 +14822,107 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.IO.Pipelines/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Encodings.Web/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll": {
+            "assetType": "runtime",
+            "rid": "browser"
+          },
+          "runtimes/win/lib/net9.0/System.Text.Encodings.Web.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Text.Json/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Pipelines": "10.0.0",
+          "System.Text.Encodings.Web": "10.0.0"
+        },
+        "compile": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/System.Text.Json.targets": {}
         }
       }
     },
     "net9.0-ios26.0/android-arm64": {
+      "CryptoNet/3.4.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Json": "10.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "contentFiles": {
+          "contentFiles/any/netstandard2.0/CryptoNetLogo-icon.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.8": {
         "type": "package",
         "dependencies": {
@@ -14670,10 +15334,97 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.IO.Pipelines/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Encodings.Web/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Json/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Pipelines": "10.0.0",
+          "System.Text.Encodings.Web": "10.0.0"
+        },
+        "compile": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/System.Text.Json.targets": {}
         }
       }
     },
     "net9.0-ios26.0/android-x64": {
+      "CryptoNet/3.4.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Json": "10.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "contentFiles": {
+          "contentFiles/any/netstandard2.0/CryptoNetLogo-icon.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.8": {
         "type": "package",
         "dependencies": {
@@ -15085,10 +15836,97 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.IO.Pipelines/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Encodings.Web/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Json/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Pipelines": "10.0.0",
+          "System.Text.Encodings.Web": "10.0.0"
+        },
+        "compile": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/System.Text.Json.targets": {}
         }
       }
     },
     "net9.0-ios26.0/iossimulator-x64": {
+      "CryptoNet/3.4.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Json": "10.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "contentFiles": {
+          "contentFiles/any/netstandard2.0/CryptoNetLogo-icon.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.8": {
         "type": "package",
         "dependencies": {
@@ -15500,10 +16338,97 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.IO.Pipelines/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Encodings.Web/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Json/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Pipelines": "10.0.0",
+          "System.Text.Encodings.Web": "10.0.0"
+        },
+        "compile": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/System.Text.Json.targets": {}
         }
       }
     },
     "net9.0-ios26.0/maccatalyst-x64": {
+      "CryptoNet/3.4.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Json": "10.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "contentFiles": {
+          "contentFiles/any/netstandard2.0/CryptoNetLogo-icon.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.8": {
         "type": "package",
         "dependencies": {
@@ -15915,10 +16840,97 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.IO.Pipelines/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Encodings.Web/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Json/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Pipelines": "10.0.0",
+          "System.Text.Encodings.Web": "10.0.0"
+        },
+        "compile": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/System.Text.Json.targets": {}
         }
       }
     },
     "net9.0-ios26.0/win10-x64": {
+      "CryptoNet/3.4.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Json": "10.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "contentFiles": {
+          "contentFiles/any/netstandard2.0/CryptoNetLogo-icon.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.8": {
         "type": "package",
         "dependencies": {
@@ -16331,9 +17343,96 @@
             "related": ".xml"
           }
         }
+      },
+      "System.IO.Pipelines/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Encodings.Web/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Json/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Pipelines": "10.0.0",
+          "System.Text.Encodings.Web": "10.0.0"
+        },
+        "compile": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/System.Text.Json.targets": {}
+        }
       }
     },
     "net9.0-maccatalyst26.0": {
+      "CryptoNet/3.4.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Json": "10.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "contentFiles": {
+          "contentFiles/any/netstandard2.0/CryptoNetLogo-icon.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.8": {
         "type": "package",
         "dependencies": {
@@ -16745,10 +17844,107 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.IO.Pipelines/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Encodings.Web/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll": {
+            "assetType": "runtime",
+            "rid": "browser"
+          },
+          "runtimes/win/lib/net9.0/System.Text.Encodings.Web.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Text.Json/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Pipelines": "10.0.0",
+          "System.Text.Encodings.Web": "10.0.0"
+        },
+        "compile": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/System.Text.Json.targets": {}
         }
       }
     },
     "net9.0-maccatalyst26.0/android-arm64": {
+      "CryptoNet/3.4.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Json": "10.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "contentFiles": {
+          "contentFiles/any/netstandard2.0/CryptoNetLogo-icon.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.8": {
         "type": "package",
         "dependencies": {
@@ -17160,10 +18356,97 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.IO.Pipelines/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Encodings.Web/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Json/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Pipelines": "10.0.0",
+          "System.Text.Encodings.Web": "10.0.0"
+        },
+        "compile": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/System.Text.Json.targets": {}
         }
       }
     },
     "net9.0-maccatalyst26.0/android-x64": {
+      "CryptoNet/3.4.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Json": "10.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "contentFiles": {
+          "contentFiles/any/netstandard2.0/CryptoNetLogo-icon.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.8": {
         "type": "package",
         "dependencies": {
@@ -17575,10 +18858,97 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.IO.Pipelines/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Encodings.Web/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Json/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Pipelines": "10.0.0",
+          "System.Text.Encodings.Web": "10.0.0"
+        },
+        "compile": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/System.Text.Json.targets": {}
         }
       }
     },
     "net9.0-maccatalyst26.0/iossimulator-x64": {
+      "CryptoNet/3.4.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Json": "10.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "contentFiles": {
+          "contentFiles/any/netstandard2.0/CryptoNetLogo-icon.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.8": {
         "type": "package",
         "dependencies": {
@@ -17990,10 +19360,97 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.IO.Pipelines/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Encodings.Web/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Json/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Pipelines": "10.0.0",
+          "System.Text.Encodings.Web": "10.0.0"
+        },
+        "compile": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/System.Text.Json.targets": {}
         }
       }
     },
     "net9.0-maccatalyst26.0/maccatalyst-x64": {
+      "CryptoNet/3.4.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Json": "10.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "contentFiles": {
+          "contentFiles/any/netstandard2.0/CryptoNetLogo-icon.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.8": {
         "type": "package",
         "dependencies": {
@@ -18405,10 +19862,97 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.IO.Pipelines/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Encodings.Web/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Json/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Pipelines": "10.0.0",
+          "System.Text.Encodings.Web": "10.0.0"
+        },
+        "compile": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/System.Text.Json.targets": {}
         }
       }
     },
     "net9.0-maccatalyst26.0/win10-x64": {
+      "CryptoNet/3.4.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Json": "10.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "contentFiles": {
+          "contentFiles/any/netstandard2.0/CryptoNetLogo-icon.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.8": {
         "type": "package",
         "dependencies": {
@@ -18821,9 +20365,96 @@
             "related": ".xml"
           }
         }
+      },
+      "System.IO.Pipelines/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Encodings.Web/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Json/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Pipelines": "10.0.0",
+          "System.Text.Encodings.Web": "10.0.0"
+        },
+        "compile": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/System.Text.Json.targets": {}
+        }
       }
     },
     "net9.0-windows10.0.19041": {
+      "CryptoNet/3.4.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Json": "10.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "contentFiles": {
+          "contentFiles/any/netstandard2.0/CryptoNetLogo-icon.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.8": {
         "type": "package",
         "dependencies": {
@@ -19486,9 +21117,106 @@
             "related": ".xml"
           }
         }
+      },
+      "System.IO.Pipelines/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Encodings.Web/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll": {
+            "assetType": "runtime",
+            "rid": "browser"
+          },
+          "runtimes/win/lib/net9.0/System.Text.Encodings.Web.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Text.Json/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Pipelines": "10.0.0",
+          "System.Text.Encodings.Web": "10.0.0"
+        },
+        "compile": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/System.Text.Json.targets": {}
+        }
       }
     },
     "net9.0-windows10.0.19041/android-arm64": {
+      "CryptoNet/3.4.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Json": "10.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "contentFiles": {
+          "contentFiles/any/netstandard2.0/CryptoNetLogo-icon.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.8": {
         "type": "package",
         "dependencies": {
@@ -20088,10 +21816,97 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.IO.Pipelines/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Encodings.Web/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Json/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Pipelines": "10.0.0",
+          "System.Text.Encodings.Web": "10.0.0"
+        },
+        "compile": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/System.Text.Json.targets": {}
         }
       }
     },
     "net9.0-windows10.0.19041/android-x64": {
+      "CryptoNet/3.4.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Json": "10.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "contentFiles": {
+          "contentFiles/any/netstandard2.0/CryptoNetLogo-icon.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.8": {
         "type": "package",
         "dependencies": {
@@ -20691,10 +22506,97 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.IO.Pipelines/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Encodings.Web/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Json/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Pipelines": "10.0.0",
+          "System.Text.Encodings.Web": "10.0.0"
+        },
+        "compile": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/System.Text.Json.targets": {}
         }
       }
     },
     "net9.0-windows10.0.19041/iossimulator-x64": {
+      "CryptoNet/3.4.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Json": "10.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "contentFiles": {
+          "contentFiles/any/netstandard2.0/CryptoNetLogo-icon.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.8": {
         "type": "package",
         "dependencies": {
@@ -21294,10 +23196,97 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.IO.Pipelines/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Encodings.Web/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Json/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Pipelines": "10.0.0",
+          "System.Text.Encodings.Web": "10.0.0"
+        },
+        "compile": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/System.Text.Json.targets": {}
         }
       }
     },
     "net9.0-windows10.0.19041/maccatalyst-x64": {
+      "CryptoNet/3.4.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Json": "10.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "contentFiles": {
+          "contentFiles/any/netstandard2.0/CryptoNetLogo-icon.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.8": {
         "type": "package",
         "dependencies": {
@@ -21898,9 +23887,96 @@
             "related": ".xml"
           }
         }
+      },
+      "System.IO.Pipelines/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Encodings.Web/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Json/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Pipelines": "10.0.0",
+          "System.Text.Encodings.Web": "10.0.0"
+        },
+        "compile": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/System.Text.Json.targets": {}
+        }
       }
     },
     "net9.0-windows10.0.19041/win10-x64": {
+      "CryptoNet/3.4.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Json": "10.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/CryptoNet.ExtShared.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.Models.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/CryptoNet.dll": {
+            "related": ".ExtShared.pdb;.Models.pdb;.xml"
+          }
+        },
+        "contentFiles": {
+          "contentFiles/any/netstandard2.0/CryptoNetLogo-icon.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.8": {
         "type": "package",
         "dependencies": {
@@ -22511,10 +24587,84 @@
             "related": ".xml"
           }
         }
+      },
+      "System.IO.Pipelines/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Encodings.Web/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "runtimes/win/lib/net9.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Text.Json/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Pipelines": "10.0.0",
+          "System.Text.Encodings.Web": "10.0.0"
+        },
+        "compile": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/System.Text.Json.targets": {}
+        }
       }
     }
   },
   "libraries": {
+    "CryptoNet/3.4.3": {
+      "sha512": "wHbs0TkLiaJsRhdaAnn9aI2CcHhzBWOpEq5eViw48pMgEGnfipwu0EMah0OVWtftqxovBniVYICe140kNZ+D3Q==",
+      "type": "package",
+      "path": "cryptonet/3.4.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CryptoNetLogo-icon.png",
+        "LICENSE",
+        "README.md",
+        "content/CryptoNetLogo-icon.ico",
+        "contentFiles/any/netstandard2.0/CryptoNetLogo-icon.ico",
+        "cryptonet.3.4.3.nupkg.sha512",
+        "cryptonet.nuspec",
+        "lib/netstandard2.0/CryptoNet.ExtShared.dll",
+        "lib/netstandard2.0/CryptoNet.ExtShared.pdb",
+        "lib/netstandard2.0/CryptoNet.Models.dll",
+        "lib/netstandard2.0/CryptoNet.Models.pdb",
+        "lib/netstandard2.0/CryptoNet.dll",
+        "lib/netstandard2.0/CryptoNet.xml"
+      ]
+    },
     "GoogleGson/2.13.0.1": {
       "sha512": "7dxQ5gnwWrezEUrtpUvDWTOOT0ymn7uejtbceF6djAtdBaqrxbzna6r8eGxQe2T4M09Ozpuz4P0LiV8/jgLBQQ==",
       "type": "package",
@@ -24597,6 +26747,144 @@
         "packageIcon.png"
       ]
     },
+    "System.IO.Pipelines/10.0.0": {
+      "sha512": "M1eb3nfXntaRJPrrMVM9EFS8I1bDTnt0uvUS6QP/SicZf/ZZjydMD5NiXxfmwW/uQwaMDP/yX2P+zQN1NBHChg==",
+      "type": "package",
+      "path": "system.io.pipelines/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.IO.Pipelines.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/System.IO.Pipelines.targets",
+        "lib/net10.0/System.IO.Pipelines.dll",
+        "lib/net10.0/System.IO.Pipelines.xml",
+        "lib/net462/System.IO.Pipelines.dll",
+        "lib/net462/System.IO.Pipelines.xml",
+        "lib/net8.0/System.IO.Pipelines.dll",
+        "lib/net8.0/System.IO.Pipelines.xml",
+        "lib/net9.0/System.IO.Pipelines.dll",
+        "lib/net9.0/System.IO.Pipelines.xml",
+        "lib/netstandard2.0/System.IO.Pipelines.dll",
+        "lib/netstandard2.0/System.IO.Pipelines.xml",
+        "system.io.pipelines.10.0.0.nupkg.sha512",
+        "system.io.pipelines.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Text.Encodings.Web/10.0.0": {
+      "sha512": "257hh1ep1Gqm1Lm0ulxf7vVBVMJuGN6EL4xSWjpi46DffXzm1058IiWsfSC06zSm7SniN+Tb5160UnXsSa8rRg==",
+      "type": "package",
+      "path": "system.text.encodings.web/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Text.Encodings.Web.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Text.Encodings.Web.targets",
+        "lib/net10.0/System.Text.Encodings.Web.dll",
+        "lib/net10.0/System.Text.Encodings.Web.xml",
+        "lib/net462/System.Text.Encodings.Web.dll",
+        "lib/net462/System.Text.Encodings.Web.xml",
+        "lib/net8.0/System.Text.Encodings.Web.dll",
+        "lib/net8.0/System.Text.Encodings.Web.xml",
+        "lib/net9.0/System.Text.Encodings.Web.dll",
+        "lib/net9.0/System.Text.Encodings.Web.xml",
+        "lib/netstandard2.0/System.Text.Encodings.Web.dll",
+        "lib/netstandard2.0/System.Text.Encodings.Web.xml",
+        "runtimes/browser/lib/net10.0/System.Text.Encodings.Web.dll",
+        "runtimes/browser/lib/net10.0/System.Text.Encodings.Web.xml",
+        "runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll",
+        "runtimes/browser/lib/net8.0/System.Text.Encodings.Web.xml",
+        "runtimes/wasi/lib/net10.0/System.Text.Encodings.Web.dll",
+        "runtimes/wasi/lib/net10.0/System.Text.Encodings.Web.xml",
+        "runtimes/win/lib/net9.0/System.Text.Encodings.Web.dll",
+        "runtimes/win/lib/net9.0/System.Text.Encodings.Web.xml",
+        "system.text.encodings.web.10.0.0.nupkg.sha512",
+        "system.text.encodings.web.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Text.Json/10.0.0": {
+      "sha512": "1Dpjwq9peG/Wt5BNbrzIhTpclfOSqBWZsUO28vVr59yQlkvL5jLBWfpfzRmJ1OY+6DciaY0DUcltyzs4fuZHjw==",
+      "type": "package",
+      "path": "system.text.json/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "analyzers/dotnet/roslyn3.11/cs/System.Text.Json.SourceGeneration.dll",
+        "analyzers/dotnet/roslyn3.11/cs/cs/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/de/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/es/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/fr/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/it/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/ja/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/ko/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/pl/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/pt-BR/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/ru/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/tr/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/zh-Hans/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/zh-Hant/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/System.Text.Json.SourceGeneration.dll",
+        "analyzers/dotnet/roslyn4.0/cs/cs/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/de/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/es/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/fr/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/it/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/ja/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/ko/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/pl/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/pt-BR/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/ru/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/tr/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/zh-Hans/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/zh-Hant/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/System.Text.Json.SourceGeneration.dll",
+        "analyzers/dotnet/roslyn4.4/cs/cs/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/de/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/es/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/fr/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/it/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/ja/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/ko/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/pl/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/pt-BR/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/ru/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/tr/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/zh-Hans/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/zh-Hant/System.Text.Json.SourceGeneration.resources.dll",
+        "buildTransitive/net461/System.Text.Json.targets",
+        "buildTransitive/net462/System.Text.Json.targets",
+        "buildTransitive/net8.0/System.Text.Json.targets",
+        "buildTransitive/netcoreapp2.0/System.Text.Json.targets",
+        "buildTransitive/netstandard2.0/System.Text.Json.targets",
+        "lib/net10.0/System.Text.Json.dll",
+        "lib/net10.0/System.Text.Json.xml",
+        "lib/net462/System.Text.Json.dll",
+        "lib/net462/System.Text.Json.xml",
+        "lib/net8.0/System.Text.Json.dll",
+        "lib/net8.0/System.Text.Json.xml",
+        "lib/net9.0/System.Text.Json.dll",
+        "lib/net9.0/System.Text.Json.xml",
+        "lib/netstandard2.0/System.Text.Json.dll",
+        "lib/netstandard2.0/System.Text.Json.xml",
+        "system.text.json.10.0.0.nupkg.sha512",
+        "system.text.json.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "Xamarin.Android.Glide/4.16.0.12": {
       "sha512": "ReaxF/UeWqIMdg3NhfrVwugKy8UO++HUH6qCtECWwbyOAXtkgI1HEFg0uPf9mQMyKTHgF7dAQP1rAryvc54VyA==",
       "type": "package",
@@ -26456,24 +28744,28 @@
   },
   "projectFileDependencyGroups": {
     "net9.0-android35.0": [
+      "CryptoNet >= 3.4.3",
       "Microsoft.Extensions.Logging.Debug >= 9.0.8",
       "Microsoft.Maui.Controls >= 9.0.111",
       "Microsoft.NET.ILLink.Tasks >= 9.0.11",
       "Newtonsoft.Json >= 13.0.4"
     ],
     "net9.0-ios26.0": [
+      "CryptoNet >= 3.4.3",
       "Microsoft.Extensions.Logging.Debug >= 9.0.8",
       "Microsoft.Maui.Controls >= 9.0.111",
       "Microsoft.NET.ILLink.Tasks >= 9.0.11",
       "Newtonsoft.Json >= 13.0.4"
     ],
     "net9.0-maccatalyst26.0": [
+      "CryptoNet >= 3.4.3",
       "Microsoft.Extensions.Logging.Debug >= 9.0.8",
       "Microsoft.Maui.Controls >= 9.0.111",
       "Microsoft.NET.ILLink.Tasks >= 9.0.11",
       "Newtonsoft.Json >= 13.0.4"
     ],
     "net9.0-windows10.0.19041": [
+      "CryptoNet >= 3.4.3",
       "Microsoft.Extensions.Logging.Debug >= 9.0.8",
       "Microsoft.Maui.Controls >= 9.0.111",
       "Newtonsoft.Json >= 13.0.4"
@@ -26546,6 +28838,10 @@
       "net9.0-android35.0": {
         "targetAlias": "net9.0-android",
         "dependencies": {
+          "CryptoNet": {
+            "target": "Package",
+            "version": "[3.4.3, )"
+          },
           "Microsoft.Extensions.Logging.Debug": {
             "target": "Package",
             "version": "[9.0.8, )"
@@ -26589,6 +28885,10 @@
       "net9.0-ios26.0": {
         "targetAlias": "net9.0-ios",
         "dependencies": {
+          "CryptoNet": {
+            "target": "Package",
+            "version": "[3.4.3, )"
+          },
           "Microsoft.Extensions.Logging.Debug": {
             "target": "Package",
             "version": "[9.0.8, )"
@@ -26632,6 +28932,10 @@
       "net9.0-maccatalyst26.0": {
         "targetAlias": "net9.0-maccatalyst",
         "dependencies": {
+          "CryptoNet": {
+            "target": "Package",
+            "version": "[3.4.3, )"
+          },
           "Microsoft.Extensions.Logging.Debug": {
             "target": "Package",
             "version": "[9.0.8, )"
@@ -26676,6 +28980,10 @@
       "net9.0-windows10.0.19041": {
         "targetAlias": "net9.0-windows10.0.19041.0",
         "dependencies": {
+          "CryptoNet": {
+            "target": "Package",
+            "version": "[3.4.3, )"
+          },
           "Microsoft.Extensions.Logging.Debug": {
             "target": "Package",
             "version": "[9.0.8, )"

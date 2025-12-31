@@ -1,10 +1,17 @@
-﻿using System.IO;
-using VaninChat2.Dto;
+﻿using VaninChat2.Dto;
+using VaninChat2.Workers.Crypto;
 
 namespace VaninChat2.Workers
 {
     public class FileWorker
     {
+        private readonly CryptoWorker _cryptoWorker;
+
+        public FileWorker(CryptoWorker cryptoWorker)
+        {
+            _cryptoWorker = cryptoWorker;
+        }
+
         public FileObj CreateEncryptedTxtFile(string fileName, string content)
         {
             if (!fileName.EndsWith(".txt"))
@@ -14,15 +21,10 @@ namespace VaninChat2.Workers
 
             using (var fileStream = new FileStream(fileName, FileMode.OpenOrCreate))
             {
-                new CryptoWorker().Encrypt(fileStream, content);
+                _cryptoWorker.Encrypt(fileStream, content);
             }
 
             return result;
-        }
-
-        public string Decrypt(byte[] bytes)
-        {
-            return new CryptoWorker().Decrypt(bytes);
         }
     }
 }

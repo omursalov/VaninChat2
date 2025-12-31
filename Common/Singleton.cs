@@ -21,23 +21,36 @@
             }
         }
 
-        public void Set(string key, object value)
+        public void Add(object value)
         {
             lock (_locker)
             {
-                _data.Add(key, value);
+                _data.Add(value.GetType().Name, value);
             }
         }
 
-        public T TryGet<T>(string key) where T : class
+        public T Get<T>() where T : class
         {
             lock (_locker)
             {
+                var key = typeof(T).Name;
                 if (_data.ContainsKey(key))
                     return (T)_data[key];
                 else
                     return null;
             }
+        }
+
+        public void DisposeAndClear()
+        {
+            foreach (var item in _data.Values)
+            {
+                if (item is IDisposable)
+                {
+                    ((IDisposable)item).Dispose();
+                }
+            }
+            _data.Clear();
         }
     }
 }

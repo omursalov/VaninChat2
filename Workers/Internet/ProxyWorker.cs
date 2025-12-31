@@ -8,11 +8,23 @@ namespace VaninChat2.Workers
         private const string KEY = "ca08cb8ae5f2b6582064f7c66a142590";
         private const string API_URL = "https://api.best-proxies.ru";
 
-        public async Task<bool> ExecuteAsync(Func<HttpClient, Task<bool>> funcAsync, int attempts = 5)
+        private const int DEFAULT_ATTEMPTS = 5;
+        private const int DEFAULT_DELAY_SEC = 5;
+
+        private readonly int _attempts;
+        private readonly int _delaySec;
+
+        public ProxyWorker(int? attempts = null, int? delaySec = null)
+        {
+            _attempts = attempts.HasValue ? attempts.Value : DEFAULT_ATTEMPTS;
+            _delaySec = delaySec.HasValue ? delaySec.Value : DEFAULT_DELAY_SEC;
+        }
+
+        public async Task<bool> ExecuteAsync(Func<HttpClient, Task<bool>> funcAsync)
         {
             var result = false;
 
-            for (var i = 0; i < attempts; i++)
+            for (var i = 0; i < _attempts; i++)
             {
                 using var httpClientHandler = new HttpClientHandler
                 {
@@ -26,6 +38,10 @@ namespace VaninChat2.Workers
                 }
                 catch (Exception ex)
                 {
+                }
+                finally
+                {
+                    await Task.Delay(_delaySec * 1000);
                 }
 
                 if (result)

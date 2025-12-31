@@ -33,7 +33,7 @@ namespace VaninChat2
 
             if (!nameValidator.Check(EDITOR_NAME.Text))
             {
-                await DisplayAlert("Имя указано не верно", $"Уберите пробелы и символы {nameValidator.InvalidChars}", "OK");
+                await DisplayAlert("Имя указано не верно", $"Уберите пробелы, переносы строк и символы {nameValidator.InvalidChars}", "OK");
                 CONNECT_BTN.IsEnabled = true;
                 return;
             }
@@ -54,7 +54,7 @@ namespace VaninChat2
 
             if (EDITOR_PASS.Text.Any(x => Char.IsWhiteSpace(x)))
             {
-                await DisplayAlert("Пароль указан не верно", "Уберите пробелы", "OK");
+                await DisplayAlert("Пароль указан не верно", "Уберите пробелы и переносы строк", "OK");
                 CONNECT_BTN.IsEnabled = true;
                 return;
             }
@@ -75,7 +75,7 @@ namespace VaninChat2
 
             if (!nameValidator.Check(EDITOR_COMPANION_NAME.Text))
             {
-                await DisplayAlert("Имя собеседника указано не верно", $"Уберите пробелы и символы {nameValidator.InvalidChars}", "OK");
+                await DisplayAlert("Имя собеседника указано не верно", $"Уберите пробелы, переносы строк и символы {nameValidator.InvalidChars}", "OK");
                 CONNECT_BTN.IsEnabled = true;
                 return;
             }
@@ -88,6 +88,15 @@ namespace VaninChat2
             }
             #endregion
 
+            #region Check internet connection
+            if (!await new PingWorker().InternetConnectionCheckAsync())
+            {
+                await DisplayAlert("Не удалось достучаться до google.com", "Проверьте подключение к интернету", "OK");
+                CONNECT_BTN.IsEnabled = true;
+                return;
+            }
+            #endregion
+
             EDITOR_NAME.IsEnabled = false;
             EDITOR_PASS.IsEnabled = false;
             EDITOR_COMPANION_NAME.IsEnabled = false;
@@ -95,9 +104,10 @@ namespace VaninChat2
             ConnectLabel.IsVisible = true;
             ConnectLabel.Text = "соединение..";
 
-            var connectionWorker = new ConnectionWorker(
-                EDITOR_NAME.Text, EDITOR_PASS.Text, EDITOR_COMPANION_NAME.Text);
-            if (!await connectionWorker.ExecuteAsync())
+            var singleton = Singleton.Get();
+            singleton.Add(new ConnectionWorker(EDITOR_NAME.Text, EDITOR_PASS.Text, EDITOR_COMPANION_NAME.Text));
+
+            if (!await singleton.Get<ConnectionWorker>().ExecuteAsync())
             {
                 ConnectLabel.IsVisible = false;
                 await DisplayAlert("Ошибка", "Не удалось соединиться", "OK");
@@ -105,6 +115,7 @@ namespace VaninChat2
                 EDITOR_PASS.IsEnabled = true;
                 EDITOR_COMPANION_NAME.IsEnabled = true;
                 CONNECT_BTN.IsEnabled = true;
+                singleton.DisposeAndClear();
                 return;
             }
 
@@ -115,9 +126,6 @@ namespace VaninChat2
         }
 
         protected override void OnDisappearing()
-        {
-            var singleton = Singleton.Get();
-            // singleton.TryGet<TcpWorker>("tcpWorker")?.Dispose();
-        }
+            => Singleton.Get().DisposeAndClear();
     }
 }
