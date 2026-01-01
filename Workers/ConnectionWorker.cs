@@ -1,10 +1,9 @@
 ﻿using Newtonsoft.Json;
-using System.Net.Http.Headers;
-using System.Text;
 using VaninChat2.Dto;
+using VaninChat2.Helpers;
+using VaninChat2.Helpers.Crypto;
+using VaninChat2.Helpers.Internet;
 using VaninChat2.Models;
-using VaninChat2.Workers.Crypto;
-using VaninChat2.Workers.Internet;
 
 namespace VaninChat2.Workers
 {
@@ -22,8 +21,9 @@ namespace VaninChat2.Workers
         private readonly string _myTxtFileName;
         private readonly string _companionTxtFileName;
 
-        private readonly ProxyWorker _proxyWorker;
-        private readonly CryptoWorker _cryptoWorker;
+        private readonly ProxyHelper _proxyWorker;
+        private readonly CryptoHelper _cryptoWorker;
+        private readonly FileSharingWorker _fileSharingWorker;
 
         public ConnectionWorker(
             string myName, string myPass, string companionName)
@@ -36,17 +36,17 @@ namespace VaninChat2.Workers
             _myTxtFileName = $"{SymbolShuffling(_myName, CONTROL_STRING)}.txt";
             _companionTxtFileName = $"{SymbolShuffling(_companionName, CONTROL_STRING)}.txt";
 
-            _proxyWorker = new ProxyWorker(attempts: 20,
+            _proxyWorker = new ProxyHelper(attempts: 20,
                 delaySec: 3, httpClientTimeoutSec: 10, cacheMinutes: 10);
 
             var passPhrase = CONTROL_STRING;
-            var saltValue = new SaltWorker().Generate();
+            var saltValue = new SaltHelper().Generate();
             var hashAlgorithm = "SHA256";
             var passwordIterations = 2;
             var initVector = "!1A3g2D4s9K556g7";
             var keySize = 256;
 
-            _cryptoWorker = new CryptoWorker(passPhrase, saltValue,
+            _cryptoWorker = new CryptoHelper(passPhrase, saltValue,
                 hashAlgorithm, passwordIterations, initVector, keySize);
         }
 
@@ -62,25 +62,10 @@ namespace VaninChat2.Workers
 
         #region Private
         private async Task<bool> SendMyInfoAsync()
-            => await _proxyWorker.ExecuteAsync(async (httpClient) =>
-            {
-                var message = new MessageWorker(_cryptoWorker).DefinePassword(_myPass);
-
-                var encryptedText = _cryptoWorker.Encrypt(message);
-                var bytes = Encoding.UTF8.GetBytes(encryptedText);
-
-                using var requestContent = new MultipartFormDataContent();
-                using var content = new ByteArrayContent(bytes);
-                content.Headers.ContentType = new MediaTypeHeaderValue("text/plain");
-                httpClient.DefaultRequestHeaders.Add("filename", _myTxtFileName);
-                requestContent.Add(content, _myTxtFileName, _myTxtFileName);
-
-                var url = $"{API_URL}/{_bin}/{_myTxtFileName}";
-                using var response = await httpClient.PostAsync(url, requestContent);
-
-                var responseContent = await response.Content.ReadAsStringAsync();
-                return response.StatusCode == System.Net.HttpStatusCode.Created;
-            });
+        {
+            var message = new MessageHelper(_cryptoWorker).DefinePassword(_myPass);
+            return await _fileSharingWorker.PostAsync(_bin, _myTxtFileName, message);
+        }
 
         private async Task<bool> WaitCompanionAsync()
             => await _proxyWorker.ExecuteAsync(async (httpClient) =>
@@ -118,7 +103,7 @@ namespace VaninChat2.Workers
                 }
 
                 var result = await getResponse.Content.ReadAsStringAsync();
-                companionPass = new MessageWorker(_cryptoWorker).ExtractPassword(result);
+                companionPass = new MessageHelper(_cryptoWorker).ExtractPassword(result);
 
                 await httpClient.DeleteAsync(url);
 

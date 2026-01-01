@@ -1,29 +1,37 @@
-﻿using System.Text.RegularExpressions;
-using VaninChat2.Workers.Crypto;
+﻿using VaninChat2.Helpers.Crypto;
+using VaninChat2.Helpers.Internet;
+using VaninChat2.Models;
 
 namespace VaninChat2.Workers
 {
     public class MessageWorker
     {
-        private const string PREFIX = "[[[PASS:";
-        private const string POSTFIX = "]]]";
+        private readonly ConnectionInfo _connection;
 
-        private readonly CryptoWorker _cryptoWorker;
+        private readonly ProxyHelper _proxyWorker;
+        private readonly CryptoHelper _cryptoWorker;
 
-        public MessageWorker(CryptoWorker cryptoWorker)
+        public MessageWorker(ConnectionInfo connection)
         {
-            _cryptoWorker = cryptoWorker;
+            _connection = connection;
+
+            _proxyWorker = new ProxyHelper(attempts: 20,
+                delaySec: 3, httpClientTimeoutSec: 10, cacheMinutes: 10);
+
+            var passPhrase = _connection.CommonPassword;
+            var saltValue = new SaltHelper().Generate();
+            var hashAlgorithm = "SHA256";
+            var passwordIterations = 2;
+            var initVector = "ELK5G~wmC5lAjF@{";
+            var keySize = 256;
+
+            _cryptoWorker = new CryptoHelper(passPhrase, saltValue,
+                hashAlgorithm, passwordIterations, initVector, keySize);
         }
 
-        public string DefinePassword(string pass)
-            => $"{PREFIX}{pass}{POSTFIX}";
-
-        public string ExtractPassword(string value)
+        public void Send(string text)
         {
-            var lines = Regex.Split(value, "\r\n|\r|\n");
-            return _cryptoWorker.Decrypt(lines[4])
-                .Replace(PREFIX, string.Empty)
-                .Replace(POSTFIX, string.Empty);
+
         }
     }
 }

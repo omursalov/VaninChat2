@@ -1,7 +1,7 @@
 ﻿using VaninChat2.Common;
+using VaninChat2.Helpers.Internet;
 using VaninChat2.Validators;
 using VaninChat2.Workers;
-using VaninChat2.Workers.Internet;
 
 namespace VaninChat2
 {
@@ -49,7 +49,7 @@ namespace VaninChat2
             #endregion
 
             #region Check internet connection
-            if (!await new PingWorker().InternetConnectionCheckAsync())
+            if (!await new PingHelper().InternetConnectionCheckAsync())
             {
                 var errorMsg = "Проверьте подключение к интернету и разрешения приложения";
                 await DisplayAlert("Не удалось достучаться до google.com", errorMsg, "OK");
