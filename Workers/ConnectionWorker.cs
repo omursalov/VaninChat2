@@ -11,6 +11,7 @@ namespace VaninChat2.Workers
     {
         private const string CONTROL_STRING = "06a9c0bf5bd7285e2c6b38d6cfefa5d0";
         private const string API_URL = "https://filebin.net";
+        private const string COOKIE = "verified=2024-05-24";
 
         private readonly string _myName;
         private readonly string _myPass;
@@ -36,7 +37,8 @@ namespace VaninChat2.Workers
             _myTxtFileName = $"{SymbolShuffling(_myName, CONTROL_STRING)}.txt";
             _companionTxtFileName = $"{SymbolShuffling(_companionName, CONTROL_STRING)}.txt";
 
-            _proxyWorker = new ProxyWorker(attempts: 20, delaySec: 10, cacheMinutes: 10);
+            _proxyWorker = new ProxyWorker(attempts: 20,
+                delaySec: 3, httpClientTimeoutSec: 10, cacheMinutes: 10);
 
             var passPhrase = CONTROL_STRING;
             var saltValue = new SaltWorker().Generate();
@@ -94,12 +96,13 @@ namespace VaninChat2.Workers
                 var responseContent = await response.Content.ReadAsStringAsync();
 
                 var files = JsonConvert.DeserializeObject<BinDto>(responseContent).files;
-                var companionTxtFile = files.FirstOrDefault(x => x.filename.Equals(_companionTxtFileName, StringComparison.OrdinalIgnoreCase));
+                var companionTxtFile = files.FirstOrDefault(
+                    x => x.filename.Equals(_companionTxtFileName, StringComparison.OrdinalIgnoreCase));
 
-                if (/*companionTxtFile == null*/1 != 1)
+                /*if (companionTxtFile == null)
                 {
                     throw new Exception("waiting for companion txt file..");
-                }
+                }*/
 
                 return true;
             });
@@ -110,17 +113,19 @@ namespace VaninChat2.Workers
 
             var result = await _proxyWorker.ExecuteAsync(async (httpClient) =>
             {
-                var url = $"{API_URL}/{_bin}/{_myTxtFileName}"; // _companion
-                httpClient.DefaultRequestHeaders.Add("Cookie", "verified=2024-05-24");
-                using var response = await httpClient.GetAsync(url);
+                var url = $"{API_URL}/{_bin}/{_myTxtFileName}";
+                httpClient.DefaultRequestHeaders.Add("Cookie", COOKIE);
+                using var getResponse = await httpClient.GetAsync(url);
 
-                if (response.StatusCode != System.Net.HttpStatusCode.OK)
+                if (getResponse.StatusCode != System.Net.HttpStatusCode.OK)
                 {
                     throw new Exception("get companion info error..");
                 }
 
-                var result = await response.Content.ReadAsStringAsync();
+                var result = await getResponse.Content.ReadAsStringAsync();
                 companionPass = new MessageWorker(_cryptoWorker).ExtractPassword(result);
+
+                await httpClient.DeleteAsync(url);
 
                 return true;
             });

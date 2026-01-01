@@ -11,19 +11,23 @@ namespace VaninChat2.Workers.Internet
 
         private const int DEFAULT_ATTEMPTS = 5;
         private const int DEFAULT_DELAY_SEC = 5;
+        private const int HTTP_CLIENT_TIMEOUT_SEC = 20;
         private const int DEFAULT_CACHE_MINUTES = 5;
 
         private readonly int _attempts;
         private readonly int _delaySec;
+        private readonly int _httpClientTimeoutSec;
         private readonly int _cacheMinutes;
 
         private WebProxy _cachedProxy;
         private DateTime _cacheDateUtc;
 
-        public ProxyWorker(int? attempts = null, int? delaySec = null, int? cacheMinutes = null)
+        public ProxyWorker(int? attempts = null, int? delaySec = null,
+            int? httpClientTimeoutSec = null, int? cacheMinutes = null)
         {
             _attempts = attempts.HasValue ? attempts.Value : DEFAULT_ATTEMPTS;
             _delaySec = delaySec.HasValue ? delaySec.Value : DEFAULT_DELAY_SEC;
+            _httpClientTimeoutSec = httpClientTimeoutSec.HasValue ? httpClientTimeoutSec.Value : HTTP_CLIENT_TIMEOUT_SEC;
             _cacheMinutes = cacheMinutes.HasValue ? cacheMinutes.Value : DEFAULT_CACHE_MINUTES;
         }
 
@@ -48,7 +52,7 @@ namespace VaninChat2.Workers.Internet
 
                     using var httpClient = new HttpClient(httpClientHandler)
                     {
-                        Timeout = TimeSpan.FromSeconds(10)
+                        Timeout = TimeSpan.FromSeconds(_httpClientTimeoutSec)
                     };
 
                     result = await funcAsync(httpClient);
