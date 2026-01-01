@@ -1,28 +1,21 @@
-﻿using System.Net.NetworkInformation;
-
-namespace VaninChat2.Workers.Internet
+﻿namespace VaninChat2.Workers.Internet
 {
     public class PingWorker
     {
         public async Task<bool> InternetConnectionCheckAsync()
         {
-            var myPing = new Ping();
-            var host = "google.com";
-            var buffer = new byte[32];
-            var timeout = 1000;
-            var pingOptions = new PingOptions();
-
-            PingReply reply = null;
-
             try
             {
-                reply = await myPing.SendPingAsync(host, timeout, buffer, pingOptions);
+                using var client = new HttpClient();
+                client.Timeout = TimeSpan.FromSeconds(5);
+                using var request = new HttpRequestMessage(HttpMethod.Head, "https://www.google.com");
+                using var response = await client.SendAsync(request);
+                return response.IsSuccessStatusCode;
             }
-            catch
+            catch (Exception ex)
             {
+                return false;
             }
-            
-            return reply?.Status == IPStatus.Success;
         }
     }
 }

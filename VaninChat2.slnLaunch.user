@@ -1,0 +1,22 @@
+[
+  {
+    "Name": "Новый профиль",
+    "Projects": [
+      {
+        "Path": "VaninChat2.csproj",
+        "Action": "Start",
+        "DebugTarget": "Windows Machine"
+      }
+    ]
+  },
+  {
+    "Name": "Новый профиль (1)",
+    "Projects": [
+      {
+        "Path": "VaninChat2.csproj",
+        "Action": "Start",
+        "DebugTarget": "Pixel 2 - API 34 (Android 14.0\u00A0— API 34)"
+      }
+    ]
+  }
+]

@@ -1,7 +1,6 @@
 ﻿using VaninChat2.Common;
 using VaninChat2.Validators;
 using VaninChat2.Workers;
-using VaninChat2.Workers.Crypto;
 using VaninChat2.Workers.Internet;
 
 namespace VaninChat2
@@ -52,7 +51,8 @@ namespace VaninChat2
             #region Check internet connection
             if (!await new PingWorker().InternetConnectionCheckAsync())
             {
-                await DisplayAlert("Не удалось достучаться до google.com", "Проверьте подключение к интернету", "OK");
+                var errorMsg = "Проверьте подключение к интернету и разрешения приложения";
+                await DisplayAlert("Не удалось достучаться до google.com", errorMsg, "OK");
                 CONNECT_BTN.IsEnabled = true;
                 return;
             }
