@@ -11,8 +11,6 @@
             <Entry x:Name="EDITOR_PASS" Placeholder="ваш пароль" IsPassword="True" Keyboard="Default" />
             <Editor x:Name="EDITOR_COMPANION_NAME" Placeholder="имя собеседника" AutoSize="TextChanges" />
 
-            <Editor x:Name="EDITOR_MESSAGE" Placeholder="ваше сообщение" AutoSize="TextChanges" MinimumHeightRequest="150" IsVisible="false" />
-
             <Button
             x:Name="CONNECT_BTN"
             Text="подключиться" 

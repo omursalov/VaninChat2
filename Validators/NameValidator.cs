@@ -2,9 +2,9 @@
 
 namespace VaninChat2.Validators
 {
-    public class NameValidator
+    public static class NameValidator
     {
-        public bool Check(string name, out string error)
+        public static bool Check(string name, out string error)
         {
             error = null;
 

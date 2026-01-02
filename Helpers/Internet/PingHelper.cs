@@ -1,8 +1,8 @@
 ﻿namespace VaninChat2.Helpers.Internet
 {
-    public class PingHelper
+    public static class PingHelper
     {
-        public async Task<bool> InternetConnectionCheckAsync()
+        public static async Task<bool> InternetConnectionCheckAsync()
         {
             try
             {

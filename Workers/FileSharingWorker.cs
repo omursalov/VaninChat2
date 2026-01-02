@@ -30,8 +30,12 @@ namespace VaninChat2.Workers
                 var url = $"{API_URL}/{bin}/{fileName}";
                 using var response = await httpClient.PostAsync(url, requestContent);
 
-                var responseContent = await response.Content.ReadAsStringAsync();
-                return response.StatusCode == System.Net.HttpStatusCode.Created;
+                if (response.StatusCode != System.Net.HttpStatusCode.Created)
+                {
+                    throw new Exception("post error");
+                }
+
+                return true;
             });
 
         public async Task<string> GetAsync(string bin, string fileName, bool deleteFlag = false)
@@ -43,7 +47,7 @@ namespace VaninChat2.Workers
 
                 if (getResponse.StatusCode != System.Net.HttpStatusCode.OK)
                 {
-                    throw new Exception("get companion info error..");
+                    throw new Exception("get error");
                 }
 
                 var result = await getResponse.Content.ReadAsStringAsync();

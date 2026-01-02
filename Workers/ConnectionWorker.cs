@@ -51,7 +51,7 @@ namespace VaninChat2.Workers
         private async Task<ConnectionInfo?> GetCompanionPassAsync()
         {
             var message = await new AttemptHelper(number: 50, delaySec: 3).ExecuteAsync(async () =>
-                await _fileSharingWorker.GetAsync(_bin, _companionTxtFileName, deleteFlag: true));
+                await _fileSharingWorker.GetAsync(_bin, _myTxtFileName, deleteFlag: true)); // _companionTxtFileName
             var companionPass = new MessageHelper(_cryptoWorker).ExtractPassword(message);
             var passwords = new[] { _myPass, companionPass };
             return new ConnectionInfo(_myName, _companionName, _bin, passwords);

@@ -17,7 +17,6 @@ namespace VaninChat2
         {
             base.OnAppearing();
             EDITOR_PASS.Text = PassHelper.Generate();
-            EDITOR_MESSAGE.IsEnabled = false;
         }
 
         private async void ConnectAsync(object sender, EventArgs e)
@@ -25,23 +24,22 @@ namespace VaninChat2
             CONNECT_BTN.IsEnabled = false;
 
             #region Validation
-            var nameValidator = new NameValidator();
 
-            if (!nameValidator.Check(EDITOR_NAME.Text, out var error))
+            if (!NameValidator.Check(EDITOR_NAME.Text, out var error))
             {
                 await DisplayAlert("Некорректное имя", error, "OK");
                 CONNECT_BTN.IsEnabled = true;
                 return;
             }
 
-            if (!new PassValidator().Check(EDITOR_PASS.Text, out error))
+            if (!PassValidator.Check(EDITOR_PASS.Text, out error))
             {
                 await DisplayAlert("Некорректный пароль", error, "OK");
                 CONNECT_BTN.IsEnabled = true;
                 return;
             }
 
-            if (!nameValidator.Check(EDITOR_COMPANION_NAME.Text, out error))
+            if (!NameValidator.Check(EDITOR_COMPANION_NAME.Text, out error))
             {
                 await DisplayAlert("Некорректное имя собеседника", error, "OK");
                 CONNECT_BTN.IsEnabled = true;
@@ -50,10 +48,20 @@ namespace VaninChat2
             #endregion
 
             #region Check internet connection
-            if (!await new PingHelper().InternetConnectionCheckAsync())
+            if (!await PingHelper.InternetConnectionCheckAsync())
             {
                 var errorMsg = "Проверьте подключение к интернету и разрешения приложения";
                 await DisplayAlert("Не удалось достучаться до google.com", errorMsg, "OK");
+                CONNECT_BTN.IsEnabled = true;
+                return;
+            }
+            #endregion
+
+            #region Check best-proxies api key
+            if (!await ProxyHelper.CheckApiKey(AppSettings.BEST_PROXIES_KEY))
+            {
+                var errorMsg = "Вероятно, ключ для прокси недействителен";
+                await DisplayAlert("Обратитесь к разработчику приложения", errorMsg, "OK");
                 CONNECT_BTN.IsEnabled = true;
                 return;
             }
@@ -66,10 +74,10 @@ namespace VaninChat2
             ConnectLabel.IsVisible = true;
             ConnectLabel.Text = "соединение..";
 
-            var singleton = Singleton.Get();
-            singleton.Add(new ConnectionWorker(EDITOR_NAME.Text, EDITOR_PASS.Text, EDITOR_COMPANION_NAME.Text));
+            var connectionWorker = new ConnectionWorker(
+                EDITOR_NAME.Text, EDITOR_PASS.Text, EDITOR_COMPANION_NAME.Text);
 
-            var connectionInfo = await singleton.Get<ConnectionWorker>().ExecuteAsync();
+            var connectionInfo = await connectionWorker.ExecuteAsync();
 
             if (connectionInfo == null)
             {
@@ -79,21 +87,14 @@ namespace VaninChat2
                 EDITOR_PASS.IsEnabled = true;
                 EDITOR_COMPANION_NAME.IsEnabled = true;
                 CONNECT_BTN.IsEnabled = true;
-                singleton.DisposeAndClear();
                 return;
             }
 
-            singleton.DisposeAndClear();
-
-            singleton.Add(connectionInfo);
-
-            ConnectLabel.Text = $"соединение с {EDITOR_COMPANION_NAME.Text} установлено";
+            /*ConnectLabel.Text = $"соединение с {EDITOR_COMPANION_NAME.Text} установлено";
 
             CONNECT_BTN.Text = "отправить";
-            CONNECT_BTN.IsEnabled = true;
+            CONNECT_BTN.IsEnabled = true;*/
+            await Navigation.PushAsync(new DiscussionPage());
         }
-
-        protected override void OnDisappearing()
-            => Singleton.Get().DisposeAndClear();
     }
 }
