@@ -15,9 +15,6 @@ namespace VaninChat2.Workers
         {
             _connection = connection;
 
-            _proxyWorker = new ProxyHelper(attempts: 20,
-                delaySec: 3, httpClientTimeoutSec: 10, cacheMinutes: 10);
-
             var passPhrase = _connection.CommonPassword;
             var saltValue = new SaltHelper().Generate();
             var hashAlgorithm = "SHA256";
@@ -25,8 +22,7 @@ namespace VaninChat2.Workers
             var initVector = "ELK5G~wmC5lAjF@{";
             var keySize = 256;
 
-            _cryptoWorker = new CryptoHelper(passPhrase, saltValue,
-                hashAlgorithm, passwordIterations, initVector, keySize);
+            _cryptoWorker = new CryptoHelper(passPhrase, saltValue);
         }
 
         public void Send(string text)

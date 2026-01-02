@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System.Net;
 using VaninChat2.Dto;
 
 namespace VaninChat2.Helpers.Internet
@@ -9,68 +8,24 @@ namespace VaninChat2.Helpers.Internet
         private const string KEY = "ca08cb8ae5f2b6582064f7c66a142590";
         private const string API_URL = "https://api.best-proxies.ru";
 
-        private const int DEFAULT_ATTEMPTS = 5;
-        private const int DEFAULT_DELAY_SEC = 5;
-        private const int HTTP_CLIENT_TIMEOUT_SEC = 20;
-        private const int DEFAULT_CACHE_MINUTES = 5;
-
-        private readonly int _attempts;
-        private readonly int _delaySec;
         private readonly int _httpClientTimeoutSec;
-        private readonly int _cacheMinutes;
 
-        private WebProxy _cachedProxy;
-        private DateTime _cacheDateUtc;
+        public ProxyHelper(int httpClientTimeoutSec)
+            => _httpClientTimeoutSec = httpClientTimeoutSec;
 
-        public ProxyHelper(int? attempts = null, int? delaySec = null,
-            int? httpClientTimeoutSec = null, int? cacheMinutes = null)
+        public async Task<T> ExecuteAsync<T>(Func<HttpClient, Task<T>> funcAsync)
         {
-            _attempts = attempts.HasValue ? attempts.Value : DEFAULT_ATTEMPTS;
-            _delaySec = delaySec.HasValue ? delaySec.Value : DEFAULT_DELAY_SEC;
-            _httpClientTimeoutSec = httpClientTimeoutSec.HasValue ? httpClientTimeoutSec.Value : HTTP_CLIENT_TIMEOUT_SEC;
-            _cacheMinutes = cacheMinutes.HasValue ? cacheMinutes.Value : DEFAULT_CACHE_MINUTES;
-        }
-
-        public async Task<bool> ExecuteAsync(Func<HttpClient, Task<bool>> funcAsync)
-        {
-            var result = false;
-
-            for (var i = 0; i < _attempts; i++)
+            using var httpClientHandler = new HttpClientHandler
             {
-                try
-                {
-                    if (_cachedProxy == null || DateTime.UtcNow.Subtract(_cacheDateUtc).TotalMinutes >= _cacheMinutes)
-                    {
-                        _cachedProxy = (await GetRandomAsync()).TryGetHttpProxy();
-                        _cacheDateUtc = DateTime.UtcNow;
-                    }
+                Proxy = (await GetRandomAsync()).TryGetHttpProxy()
+            };
 
-                    using var httpClientHandler = new HttpClientHandler
-                    {
-                        Proxy = _cachedProxy
-                    };
+            using var httpClient = new HttpClient(httpClientHandler)
+            {
+                Timeout = TimeSpan.FromSeconds(_httpClientTimeoutSec)
+            };
 
-                    using var httpClient = new HttpClient(httpClientHandler)
-                    {
-                        Timeout = TimeSpan.FromSeconds(_httpClientTimeoutSec)
-                    };
-
-                    result = await funcAsync(httpClient);
-                }
-                catch (Exception ex)
-                {
-                    _cachedProxy = null;
-                }
-                finally
-                {
-                    await Task.Delay(_delaySec * 1000);
-                }
-
-                if (result)
-                    break;
-            }
-
-            return result;
+            return await funcAsync(httpClient);
         }
 
         private async Task<ProxyDto> GetRandomAsync()

@@ -1,10 +1,10 @@
-﻿namespace VaninChat2.Workers
+﻿namespace VaninChat2.Helpers
 {
-    public class PassWorker
+    public static class PassHelper
     {
         private const string characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#@$%^&*()-+<>?=";
 
-        public string Generate(int length = 16)
+        public static string Generate(int length = 16)
         {
             var rand = new Random();
             var password = string.Empty;

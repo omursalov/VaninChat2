@@ -1,7 +1,5 @@
 ﻿using System.Net.Http.Headers;
 using System.Text;
-using VaninChat2.Helpers;
-using VaninChat2.Helpers.Crypto;
 using VaninChat2.Helpers.Internet;
 
 namespace VaninChat2.Workers
@@ -12,28 +10,16 @@ namespace VaninChat2.Workers
         private const string COOKIE = "verified=2024-05-24";
 
         private readonly ProxyHelper _proxyWorker;
-        private readonly CryptoHelper _cryptoWorker;
 
-        public FileSharingWorker(string passPhrase)
+        public FileSharingWorker()
         {
-            _proxyWorker = new ProxyHelper(attempts: 20,
-                delaySec: 3, httpClientTimeoutSec: 10, cacheMinutes: 10);
-
-            var saltValue = new SaltHelper().Generate();
-            var hashAlgorithm = "SHA256";
-            var passwordIterations = 2;
-            var initVector = "!1A3g2D4s9K556g7";
-            var keySize = 256;
-
-            _cryptoWorker = new CryptoHelper(passPhrase, saltValue,
-                hashAlgorithm, passwordIterations, initVector, keySize);
+            _proxyWorker = new ProxyHelper(httpClientTimeoutSec: 10);
         }
 
         public async Task<bool> PostAsync(string bin, string fileName, string text)
             => await _proxyWorker.ExecuteAsync(async (httpClient) =>
             {
-                var encryptedText = _cryptoWorker.Encrypt(text);
-                var bytes = Encoding.UTF8.GetBytes(encryptedText);
+                var bytes = Encoding.UTF8.GetBytes(text);
 
                 using var requestContent = new MultipartFormDataContent();
                 using var content = new ByteArrayContent(bytes);
@@ -46,6 +32,28 @@ namespace VaninChat2.Workers
 
                 var responseContent = await response.Content.ReadAsStringAsync();
                 return response.StatusCode == System.Net.HttpStatusCode.Created;
+            });
+
+        public async Task<string> GetAsync(string bin, string fileName, bool deleteFlag = false)
+            => await _proxyWorker.ExecuteAsync(async (httpClient) =>
+            {
+                var url = $"{API_URL}/{bin}/{fileName}";
+                httpClient.DefaultRequestHeaders.Add("Cookie", COOKIE);
+                using var getResponse = await httpClient.GetAsync(url);
+
+                if (getResponse.StatusCode != System.Net.HttpStatusCode.OK)
+                {
+                    throw new Exception("get companion info error..");
+                }
+
+                var result = await getResponse.Content.ReadAsStringAsync();
+
+                if (deleteFlag)
+                {
+                    await httpClient.DeleteAsync(url);
+                }
+
+                return result;
             });
     }
 }

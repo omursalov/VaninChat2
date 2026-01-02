@@ -7,16 +7,8 @@
       "RelativeMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|solutionrelative:workers\\connectionworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|c:\\users\\user\\source\\repos\\vaninchat2\\helpers\\messagehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|solutionrelative:helpers\\messagehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|c:\\users\\user\\source\\repos\\vaninchat2\\workers\\messageworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|solutionrelative:workers\\messageworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|c:\\users\\user\\source\\repos\\vaninchat2\\helpers\\internet\\proxyhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|solutionrelative:helpers\\internet\\proxyhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|c:\\users\\user\\source\\repos\\vaninchat2\\workers\\filesharingworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|solutionrelative:workers\\filesharingworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|c:\\users\\user\\source\\repos\\vaninchat2\\helpers\\crypto\\cryptohelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,8 +19,20 @@
       "RelativeMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|solutionrelative:mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|c:\\users\\user\\source\\repos\\vaninchat2\\helpers\\internet\\proxyhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|solutionrelative:helpers\\internet\\proxyhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|c:\\users\\user\\source\\repos\\vaninchat2\\workers\\messageworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|solutionrelative:workers\\messageworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|c:\\users\\user\\source\\repos\\vaninchat2\\helpers\\internet\\pinghelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|solutionrelative:helpers\\internet\\pinghelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|c:\\users\\user\\source\\repos\\vaninchat2\\helpers\\messagehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|solutionrelative:helpers\\messagehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|c:\\users\\user\\source\\repos\\vaninchat2\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,18 +59,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\AppData\\Local\\SourceServer\\076328657584d960e1da188b1a50c49f2711d3fc0272001e6c42e803a9f0af47\\Workers\\ConnectionWorker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|c:\\users\\user\\source\\repos\\vaninchat2\\models\\connectioninfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|solutionrelative:models\\connectioninfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|c:\\users\\user\\source\\repos\\vaninchat2\\helpers\\crypto\\salthelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|solutionrelative:helpers\\crypto\\salthelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|c:\\users\\user\\source\\repos\\vaninchat2\\workers\\passworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|solutionrelative:workers\\passworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6BE2ED36-A9DD-464C-84BC-50941162B897}|VaninChat2.csproj|c:\\users\\user\\source\\repos\\vaninchat2\\validators\\passvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -111,20 +103,107 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "FileSharingWorker.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\Workers\\FileSharingWorker.cs",
+              "RelativeDocumentMoniker": "Workers\\FileSharingWorker.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\Workers\\FileSharingWorker.cs",
+              "RelativeToolTip": "Workers\\FileSharingWorker.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAIA3wCwAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-02T19:08:14.521Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "MessageWorker.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\Workers\\MessageWorker.cs",
               "RelativeDocumentMoniker": "Workers\\MessageWorker.cs",
               "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\Workers\\MessageWorker.cs",
               "RelativeToolTip": "Workers\\MessageWorker.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-01T20:57:23.133Z",
+              "WhenOpened": "2026-01-01T20:57:23.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ConnectionWorker.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\Workers\\ConnectionWorker.cs",
+              "RelativeDocumentMoniker": "Workers\\ConnectionWorker.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\Workers\\ConnectionWorker.cs",
+              "RelativeToolTip": "Workers\\ConnectionWorker.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T18:56:32.393Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\MainPage.xaml.cs",
+              "RelativeToolTip": "MainPage.xaml.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAgwEcAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T19:11:36.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProxyHelper.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\Helpers\\Internet\\ProxyHelper.cs",
+              "RelativeDocumentMoniker": "Helpers\\Internet\\ProxyHelper.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\Helpers\\Internet\\ProxyHelper.cs",
+              "RelativeToolTip": "Helpers\\Internet\\ProxyHelper.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwAwAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T16:53:02.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CryptoHelper.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\Helpers\\Crypto\\CryptoHelper.cs",
+              "RelativeDocumentMoniker": "Helpers\\Crypto\\CryptoHelper.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\Helpers\\Crypto\\CryptoHelper.cs",
+              "RelativeToolTip": "Helpers\\Crypto\\CryptoHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBAAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T13:38:43.238Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PingHelper.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\Helpers\\Internet\\PingHelper.cs",
+              "RelativeDocumentMoniker": "Helpers\\Internet\\PingHelper.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\Helpers\\Internet\\PingHelper.cs",
+              "RelativeToolTip": "Helpers\\Internet\\PingHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T14:21:03.721Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appicon.svg",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\Resources\\AppIcon\\appicon.svg",
+              "RelativeDocumentMoniker": "Resources\\AppIcon\\appicon.svg",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\Resources\\AppIcon\\appicon.svg",
+              "RelativeToolTip": "Resources\\AppIcon\\appicon.svg",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAGAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQKSURBVDhPrVRbTCNVGP5OOzO9TKEWSrGUttpdpV2ua7ioaDa7ullcdVe8rHFNjPFBY4hGY0wIJprw5ItmCdEXL/FRE4MQsw9LiCthIcFFxA3hFiEsLQUKpaW03XZmOuOZaQsY9W2/5J/zz3/55j///OfgrkJRFFJQD9DX13elrq7uXVWnfk2KugpZlpHJZJBKpYa6u7u7gsFgWHP8HyjhHE2Sc7ncf4okSfLMzIw8NTUl9/f3/xgIBGoKqRr0hfUAHR0dXW1tbXaZFiQJccjpWyDJbyBsfQ9x46oW81dIRHNLG0wmk4/juOr19fVbUQrV9w9CrvVl4m9s7VpIG\u002BxL6\u002BMolb6EaesrSOFhgNRAVtyQIhMIbgPeB1ths9kYs9l8vKyszD0/P39jnyJPSAj4hy7YPE\u002B/\u002BUmJ0/NkS4DlzlRegXXzGmZWmvBT4j0sGy6jvvE85O05JEUeN6ZXMT09jUQioafEgdHR0R/i8XiYUfmMdees3ovvfPhEc/VbL9Qvm5vljxBdTGM81YMl33MICiZMLG8iJa7iRUct/I3HUA0HBEGAxWLB7OysVpcKnfpwdLzd3haoePVS7WRpS/oDsjeTwTrpRbqiE2wK4EUJnvuqcHM7h7HY/SAlHtjt5XA6nbBardDr9QdToBF6nZbOZ/1z5Q3i52RnSoS54TvUP9yJSyedeKXBjuTGNmycAYQ3YSrKYiejpVFQkiOjpULb8omK\u002BOOPWL81JVeM\u002BEL8GKFfWYjSn/Qn0GDQucsxKGd0YDkWK9tZxPYFVJUaVS7a/8MZVcFUORnu9YZr1ezaMrmu\u002B1ThW84Sn0IrKATlSRWIdwTaMxFZSYKk2jS36skTFkmZ0ILnYmzlZ8Nk8g1lzn0u99vEor6p0kwUeiLUIJVQTSR0MF202ka3BQ4Lp9nydHnCIhglEX5p67Yrez13GmJKYXgTq2v32clJFw\u002BrkUEiI2JyNYa1WFrNhNtmhoXaDzkOyVQwmVCmPZYy/DK\u002ByZzwMHFvpc9FhjfSGF7agkK3yHAMcpZyxHJm7EZ28ZSOgKVShFb/kQp10h4xne/JXg5v7ny2OLcSvb2xrwh8CeicgBx/AFmXFxF6h0QiUfiMEp6pqwSnL/7lf0Pf8xocp\u002B6N\u002BW6OL4x5nayYjIv\u002BRFLmQ5E9RHfiuBPdBbu/h9p7GLx/\u002BhjKeNo/erK02mhlhOpra2sYHBz8mp6asJ7O62R4E2cC3NYpV2Rs1lndaD776GN\u002BB5tDjZVBaxWPC7UOPN9UBSOrTVl\u002Bn4VdE52OEgYxNDSkEeatR9Db2zumXl\u002BiKBZEkEUhL/SoFSR7sKoxIyMjstvtblHzC588BG3w7wMDA\u002B0FXRP1Ui02vmgrigpa2R902dVe7i6AvwHcTSP/8z9AyQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2026-01-01T00:20:16.065Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "MessageHelper.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\Helpers\\MessageHelper.cs",
               "RelativeDocumentMoniker": "Helpers\\MessageHelper.cs",
@@ -137,70 +216,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ConnectionWorker.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\Workers\\ConnectionWorker.cs",
-              "RelativeDocumentMoniker": "Workers\\ConnectionWorker.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\Workers\\ConnectionWorker.cs",
-              "RelativeToolTip": "Workers\\ConnectionWorker.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAYwEIAAABTAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-31T18:56:32.393Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MainPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\MainPage.xaml.cs",
-              "RelativeDocumentMoniker": "MainPage.xaml.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\MainPage.xaml.cs",
-              "RelativeToolTip": "MainPage.xaml.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAgwDoAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-30T19:11:36.318Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PingHelper.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\Helpers\\Internet\\PingHelper.cs",
-              "RelativeDocumentMoniker": "Helpers\\Internet\\PingHelper.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\Helpers\\Internet\\PingHelper.cs",
-              "RelativeToolTip": "Helpers\\Internet\\PingHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-31T14:21:03.721Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "VaninChat2.csproj",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\VaninChat2.csproj",
-              "RelativeDocumentMoniker": "VaninChat2.csproj",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\VaninChat2.csproj",
-              "RelativeToolTip": "VaninChat2.csproj",
-              "ViewState": "AgIAABMAAAAAAAAAAAAmwDgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-01-01T00:20:02.347Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "appicon.svg",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\Resources\\AppIcon\\appicon.svg",
-              "RelativeDocumentMoniker": "Resources\\AppIcon\\appicon.svg",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\Resources\\AppIcon\\appicon.svg",
-              "RelativeToolTip": "Resources\\AppIcon\\appicon.svg",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAGAAAAAAAAAA==",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQKSURBVDhPrVRbTCNVGP5OOzO9TKEWSrGUttpdpV2ua7ioaDa7ullcdVe8rHFNjPFBY4hGY0wIJprw5ItmCdEXL/FRE4MQsw9LiCthIcFFxA3hFiEsLQUKpaW03XZmOuOZaQsY9W2/5J/zz3/55j///OfgrkJRFFJQD9DX13elrq7uXVWnfk2KugpZlpHJZJBKpYa6u7u7gsFgWHP8HyjhHE2Sc7ncf4okSfLMzIw8NTUl9/f3/xgIBGoKqRr0hfUAHR0dXW1tbXaZFiQJccjpWyDJbyBsfQ9x46oW81dIRHNLG0wmk4/juOr19fVbUQrV9w9CrvVl4m9s7VpIG\u002BxL6\u002BMolb6EaesrSOFhgNRAVtyQIhMIbgPeB1ths9kYs9l8vKyszD0/P39jnyJPSAj4hy7YPE\u002B/\u002BUmJ0/NkS4DlzlRegXXzGmZWmvBT4j0sGy6jvvE85O05JEUeN6ZXMT09jUQioafEgdHR0R/i8XiYUfmMdees3ovvfPhEc/VbL9Qvm5vljxBdTGM81YMl33MICiZMLG8iJa7iRUct/I3HUA0HBEGAxWLB7OysVpcKnfpwdLzd3haoePVS7WRpS/oDsjeTwTrpRbqiE2wK4EUJnvuqcHM7h7HY/SAlHtjt5XA6nbBardDr9QdToBF6nZbOZ/1z5Q3i52RnSoS54TvUP9yJSyedeKXBjuTGNmycAYQ3YSrKYiejpVFQkiOjpULb8omK\u002BOOPWL81JVeM\u002BEL8GKFfWYjSn/Qn0GDQucsxKGd0YDkWK9tZxPYFVJUaVS7a/8MZVcFUORnu9YZr1ezaMrmu\u002B1ThW84Sn0IrKATlSRWIdwTaMxFZSYKk2jS36skTFkmZ0ILnYmzlZ8Nk8g1lzn0u99vEor6p0kwUeiLUIJVQTSR0MF202ka3BQ4Lp9nydHnCIhglEX5p67Yrez13GmJKYXgTq2v32clJFw\u002BrkUEiI2JyNYa1WFrNhNtmhoXaDzkOyVQwmVCmPZYy/DK\u002ByZzwMHFvpc9FhjfSGF7agkK3yHAMcpZyxHJm7EZ28ZSOgKVShFb/kQp10h4xne/JXg5v7ny2OLcSvb2xrwh8CeicgBx/AFmXFxF6h0QiUfiMEp6pqwSnL/7lf0Pf8xocp\u002B6N\u002BW6OL4x5nayYjIv\u002BRFLmQ5E9RHfiuBPdBbu/h9p7GLx/\u002BhjKeNo/erK02mhlhOpra2sYHBz8mp6asJ7O62R4E2cC3NYpV2Rs1lndaD776GN\u002BB5tDjZVBaxWPC7UOPN9UBSOrTVl\u002Bn4VdE52OEgYxNDSkEeatR9Db2zumXl\u002BiKBZEkEUhL/SoFSR7sKoxIyMjstvtblHzC588BG3w7wMDA\u002B0FXRP1Ui02vmgrigpa2R902dVe7i6AvwHcTSP/8z9AyQAAAABJRU5ErkJggg==",
-              "WhenOpened": "2026-01-01T00:20:16.065Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "appiconfg.svg",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\Resources\\AppIcon\\appiconfg.svg",
               "RelativeDocumentMoniker": "Resources\\AppIcon\\appiconfg.svg",
@@ -212,33 +228,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProxyHelper.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\Helpers\\Internet\\ProxyHelper.cs",
-              "RelativeDocumentMoniker": "Helpers\\Internet\\ProxyHelper.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\Helpers\\Internet\\ProxyHelper.cs",
-              "RelativeToolTip": "Helpers\\Internet\\ProxyHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-30T16:53:02.318Z",
-              "EditorCaption": ""
+              "DocumentIndex": 11,
+              "Title": "VaninChat2.csproj",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\VaninChat2.csproj",
+              "RelativeDocumentMoniker": "VaninChat2.csproj",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\VaninChat2.csproj",
+              "RelativeToolTip": "VaninChat2.csproj",
+              "ViewState": "AgIAABMAAAAAAAAAAAAmwDgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-01T00:20:02.347Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CryptoHelper.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\Helpers\\Crypto\\CryptoHelper.cs",
-              "RelativeDocumentMoniker": "Helpers\\Crypto\\CryptoHelper.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\Helpers\\Crypto\\CryptoHelper.cs",
-              "RelativeToolTip": "Helpers\\Crypto\\CryptoHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-31T13:38:43.238Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "app.manifest",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\Platforms\\Windows\\app.manifest",
               "RelativeDocumentMoniker": "Platforms\\Windows\\app.manifest",
@@ -250,19 +252,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "PassWorker.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\Workers\\PassWorker.cs",
-              "RelativeDocumentMoniker": "Workers\\PassWorker.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\Workers\\PassWorker.cs",
-              "RelativeToolTip": "Workers\\PassWorker.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-31T19:29:04.841Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "MauiProgram.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\MauiProgram.cs",
               "RelativeDocumentMoniker": "MauiProgram.cs",
@@ -270,12 +260,11 @@
               "RelativeToolTip": "MauiProgram.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-29T16:14:40.729Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-29T16:14:40.729Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "ConnectionWorker.cs",
               "DocumentMoniker": "C:\\Users\\user\\AppData\\Local\\SourceServer\\076328657584d960e1da188b1a50c49f2711d3fc0272001e6c42e803a9f0af47\\Workers\\ConnectionWorker.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\SourceServer\\076328657584d960e1da188b1a50c49f2711d3fc0272001e6c42e803a9f0af47\\Workers\\ConnectionWorker.cs",
@@ -287,7 +276,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "CryptoNetLogo-icon.ico - Icon [16x16, 32-\u0440\u0430\u0437\u0440\u044F\u0434\u043D\u043E\u0435, BMP]",
               "DocumentMoniker": "C:\\Users\\user\\.nuget\\packages\\cryptonet\\3.4.3\\contentFiles\\any\\netstandard2.0\\CryptoNetLogo-icon.ico",
               "RelativeDocumentMoniker": "..\\..\\..\\.nuget\\packages\\cryptonet\\3.4.3\\contentFiles\\any\\netstandard2.0\\CryptoNetLogo-icon.ico",
@@ -299,19 +288,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ConnectionInfo.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\Models\\ConnectionInfo.cs",
-              "RelativeDocumentMoniker": "Models\\ConnectionInfo.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\Models\\ConnectionInfo.cs",
-              "RelativeToolTip": "Models\\ConnectionInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-31T19:05:02.247Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 15,
               "Title": "PassValidator.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\Validators\\PassValidator.cs",
               "RelativeDocumentMoniker": "Validators\\PassValidator.cs",
@@ -323,20 +300,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "SaltHelper.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\Helpers\\Crypto\\SaltHelper.cs",
-              "RelativeDocumentMoniker": "Helpers\\Crypto\\SaltHelper.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\VaninChat2\\Helpers\\Crypto\\SaltHelper.cs",
-              "RelativeToolTip": "Helpers\\Crypto\\SaltHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-31T22:55:51.547Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 16,
               "Title": "NameValidator.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\Validators\\NameValidator.cs",
               "RelativeDocumentMoniker": "Validators\\NameValidator.cs",
@@ -348,7 +312,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 18,
               "Title": "BinDto.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\Dto\\BinDto.cs",
               "RelativeDocumentMoniker": "Dto\\BinDto.cs",
@@ -360,7 +324,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 17,
               "Title": "ProxyDto.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\Dto\\ProxyDto.cs",
               "RelativeDocumentMoniker": "Dto\\ProxyDto.cs",
@@ -372,7 +336,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 19,
               "Title": "MainPage.xaml",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\MainPage.xaml",
               "RelativeDocumentMoniker": "MainPage.xaml",
@@ -384,7 +348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 20,
               "Title": "readme.txt",
               "DocumentMoniker": "C:\\Users\\user\\.nuget\\packages\\ironzip\\2025.12.1\\readme.txt",
               "RelativeDocumentMoniker": "..\\..\\..\\.nuget\\packages\\ironzip\\2025.12.1\\readme.txt",
@@ -396,7 +360,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 22,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\App.xaml.cs",
               "RelativeDocumentMoniker": "App.xaml.cs",
@@ -408,7 +372,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 21,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\VaninChat2\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",

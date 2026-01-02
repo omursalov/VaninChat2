@@ -5,35 +5,29 @@ namespace VaninChat2.Helpers.Crypto
 {
     public class CryptoHelper
     {
-        private readonly Encoding _encoding;
+        private const string HASH_ALGORITHM = "SHA256";
+        private const int PASSWORD_ITERATIONS = 2;
+        private const string INIT_VECTOR = "!1A3g2D4s9K556g7";
+        private const int KEY_SIZE = 256;
 
         private readonly string _passPhrase;
         private readonly string _saltValue;
-        private readonly string _hashAlgorithm;
-        private readonly int _passwordIterations;
-        private readonly string _initVector;
-        private readonly int _keySize;
+        private readonly Encoding _encoding;
 
-        public CryptoHelper(string passPhrase, string saltValue,
-            string hashAlgorithm, int passwordIterations,
-            string initVector, int keySize)
+        public CryptoHelper(string passPhrase, string saltValue)
         {
-            _encoding = Encoding.UTF8;
             _passPhrase = passPhrase;
             _saltValue = saltValue;
-            _hashAlgorithm = hashAlgorithm;
-            _passwordIterations = passwordIterations;
-            _initVector = initVector;
-            _keySize = keySize;
+            _encoding = Encoding.UTF8;
         }
 
         public string Encrypt(string text)
         {
-            var initVectorBytes = _encoding.GetBytes(_initVector);
+            var initVectorBytes = _encoding.GetBytes(INIT_VECTOR);
             var saltValueBytes = _encoding.GetBytes(_saltValue);
             var textBytes = _encoding.GetBytes(text);
-            using var password = new PasswordDeriveBytes(_passPhrase, saltValueBytes, _hashAlgorithm, _passwordIterations);
-            var keyBytes = password.GetBytes(_keySize / 8);
+            using var password = new PasswordDeriveBytes(_passPhrase, saltValueBytes, HASH_ALGORITHM, PASSWORD_ITERATIONS);
+            var keyBytes = password.GetBytes(KEY_SIZE / 8);
             using var symmetricKey = new RijndaelManaged();
             symmetricKey.Mode = CipherMode.CBC;
             using var encryptor = symmetricKey.CreateEncryptor(keyBytes, initVectorBytes);
@@ -49,11 +43,11 @@ namespace VaninChat2.Helpers.Crypto
 
         public string Decrypt(string text)
         {
-            var initVectorBytes = _encoding.GetBytes(_initVector);
+            var initVectorBytes = _encoding.GetBytes(INIT_VECTOR);
             var saltValueBytes = _encoding.GetBytes(_saltValue);
             var textBytes = Convert.FromBase64String(text);
-            using var password = new PasswordDeriveBytes(_passPhrase, saltValueBytes, _hashAlgorithm, _passwordIterations);
-            var keyBytes = password.GetBytes(_keySize / 8);
+            using var password = new PasswordDeriveBytes(_passPhrase, saltValueBytes, HASH_ALGORITHM, PASSWORD_ITERATIONS);
+            var keyBytes = password.GetBytes(KEY_SIZE / 8);
             using var symmetricKey = new RijndaelManaged();
             symmetricKey.Mode = CipherMode.CBC;
             using var decryptor = symmetricKey.CreateDecryptor(keyBytes, initVectorBytes);

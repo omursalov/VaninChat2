@@ -1,4 +1,5 @@
 ﻿using VaninChat2.Common;
+using VaninChat2.Helpers;
 using VaninChat2.Helpers.Internet;
 using VaninChat2.Validators;
 using VaninChat2.Workers;
@@ -15,7 +16,7 @@ namespace VaninChat2
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            EDITOR_PASS.Text = new PassWorker().Generate();
+            EDITOR_PASS.Text = PassHelper.Generate();
             EDITOR_MESSAGE.IsEnabled = false;
         }
 
