@@ -17,6 +17,20 @@
             Clicked="ConnectAsync"
             HorizontalOptions="Fill"/>
 
+            <Button
+            x:Name="GO_TO_DISCUSSION_BTN"
+            Text="переписка" 
+            Clicked="GoToDiscussionAsync"
+            HorizontalOptions="Fill"
+            IsVisible="False"/>
+
+            <Button
+            x:Name="DISCONNECT_BTN"
+            Text="отключиться" 
+            Clicked="DisconnectAsync"
+            HorizontalOptions="Fill"
+            IsVisible="False"/>
+
             <Label 
             x:Name="ConnectLabel"
             FontSize="16"

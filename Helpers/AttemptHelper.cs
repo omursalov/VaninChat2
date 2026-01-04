@@ -1,4 +1,6 @@
-﻿namespace VaninChat2.Helpers
+﻿using VaninChat2.Exceptions;
+
+namespace VaninChat2.Helpers
 {
     public class AttemptHelper
     {
@@ -11,6 +13,26 @@
             _delaySec = delaySec;
         }
 
+        public async Task ExecuteAsync(Func<Task> funcAsync)
+        {
+            for (var i = 0; i < _number; i++)
+            {
+                try
+                {
+                    await funcAsync();
+                    break;
+                }
+                catch (AttemptCancelException)
+                {
+                    break;
+                }
+                catch (Exception ex)
+                {
+                    await Task.Delay(_delaySec * 1000);
+                }
+            }
+        }
+
         public async Task<T> ExecuteAsync<T>(Func<Task<T>> funcAsync)
         {
             T result = default;
@@ -20,6 +42,10 @@
                 try
                 {
                     result = await funcAsync();
+                    break;
+                }
+                catch (AttemptCancelException)
+                {
                     break;
                 }
                 catch (Exception ex)

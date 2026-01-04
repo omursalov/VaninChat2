@@ -71,6 +71,10 @@
               "target": "Package",
               "version": "[3.4.3, )"
             },
+            "Dropbox.Api": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[9.0.8, )"
@@ -117,6 +121,10 @@
             "CryptoNet": {
               "target": "Package",
               "version": "[3.4.3, )"
+            },
+            "Dropbox.Api": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
@@ -165,6 +173,10 @@
               "target": "Package",
               "version": "[3.4.3, )"
             },
+            "Dropbox.Api": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[9.0.8, )"
@@ -212,6 +224,10 @@
             "CryptoNet": {
               "target": "Package",
               "version": "[3.4.3, )"
+            },
+            "Dropbox.Api": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",

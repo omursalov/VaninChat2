@@ -10,6 +10,7 @@
       "VaninChat2/1.0": {
         "dependencies": {
           "CryptoNet": "3.4.3",
+          "Dropbox.Api": "7.0.0",
           "Microsoft.Extensions.Logging.Debug": "9.0.8",
           "Microsoft.Maui.Controls": "9.0.111",
           "Newtonsoft.Json": "13.0.4",
@@ -48,6 +49,17 @@
           "lib/netstandard2.0/CryptoNet.dll": {
             "assemblyVersion": "3.4.3.0",
             "fileVersion": "3.4.3.0"
+          }
+        }
+      },
+      "Dropbox.Api/7.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Dropbox.Api.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.0.0"
           }
         }
       },
@@ -565,6 +577,13 @@
       "sha512": "sha512-wHbs0TkLiaJsRhdaAnn9aI2CcHhzBWOpEq5eViw48pMgEGnfipwu0EMah0OVWtftqxovBniVYICe140kNZ+D3Q==",
       "path": "cryptonet/3.4.3",
       "hashPath": "cryptonet.3.4.3.nupkg.sha512"
+    },
+    "Dropbox.Api/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ie48rFTFL7rC8YGZ2KMRckhN8QbF56VzCns9+PymrjwcVfnGfKEc2EtHLUau2hrlwvaUtDf6wvTQJXHWAwhhug==",
+      "path": "dropbox.api/7.0.0",
+      "hashPath": "dropbox.api.7.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/9.0.8": {
       "type": "package",

@@ -11,7 +11,7 @@ namespace VaninChat2.Helpers.Internet
         private readonly string _key;
         private readonly int _httpClientTimeoutSec;
 
-        public ProxyHelper(string key = null, int httpClientTimeoutSec = 25)
+        public ProxyHelper(string key = null, int httpClientTimeoutSec = 10)
         {
             _key = !string.IsNullOrWhiteSpace(key) ? key : AppSettings.BEST_PROXIES_KEY;
             _httpClientTimeoutSec = httpClientTimeoutSec;
@@ -25,6 +25,21 @@ namespace VaninChat2.Helpers.Internet
                 using var getResponse = await httpClient.GetAsync(url);
                 return getResponse.StatusCode == System.Net.HttpStatusCode.OK;
             });
+
+        public async Task ExecuteAsync(Func<HttpClient, Task> funcAsync)
+        {
+            using var httpClientHandler = new HttpClientHandler
+            {
+                Proxy = (await GetRandomAsync()).TryGetHttpProxy()
+            };
+
+            using var httpClient = new HttpClient(httpClientHandler)
+            {
+                Timeout = TimeSpan.FromSeconds(_httpClientTimeoutSec)
+            };
+
+            await funcAsync(httpClient);
+        }
 
         public async Task<T> ExecuteAsync<T>(Func<HttpClient, Task<T>> funcAsync)
         {

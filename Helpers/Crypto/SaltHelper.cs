@@ -4,7 +4,7 @@
     {
         private readonly int _newEveryMinutes;
 
-        public SaltHelper(int newEveryMinutes = 10)
+        public SaltHelper(int newEveryMinutes = 1440)
         {
             _newEveryMinutes = newEveryMinutes;
         }

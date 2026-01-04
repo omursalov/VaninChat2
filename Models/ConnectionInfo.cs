@@ -1,28 +1,37 @@
-﻿namespace VaninChat2.Models
+﻿using VaninChat2.Helpers;
+using VaninChat2.Helpers.Crypto;
+
+namespace VaninChat2.Models
 {
     public class ConnectionInfo
     {
         public string CommonPassword { get; }
+        public string CommonSalt { get; }
 
         public string MyName { get; }
         public string CompanionName { get; }
 
         public string Bin { get; }
+        public string MyTxtFileName { get; }
+        public string MyCompanionTxtFileName { get; }
 
-        public DateTime StartUtc {  get; }
+        public DateTime StartUtc { get; }
 
         public int ExpiredInMinutes { get; }
 
-        public ConnectionInfo(string myName, string companionName, string bin, params string[] passwords)
+        public ConnectionInfo(string myName, string companionName,
+            string bin, string myTxtFileName, string companionTxtFileName,
+            params string[] passwords)
         {
             MyName = myName;
             CompanionName = companionName;
 
             Bin = bin;
+            MyTxtFileName = myTxtFileName;
+            MyCompanionTxtFileName = companionTxtFileName;
 
-            var characters = string.Concat(passwords).ToArray();
-            Array.Sort(characters);
-            CommonPassword = new string(characters);
+            CommonPassword = StringHelper.SortCharacters(passwords);
+            CommonSalt = new SaltHelper().Generate();
 
             StartUtc = DateTime.UtcNow;
             ExpiredInMinutes = 10;

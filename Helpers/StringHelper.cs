@@ -5,8 +5,8 @@
         public static string SortCharacters(params string[] values)
         {
             var characters = string.Concat(values).ToArray();
-            Array.Sort(characters);
-            return new string(characters);
+            var arr = characters.OrderByDescending(c => c).ToArray();
+            return new string(arr);
         }
     }
 }

@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "pN+gNBi6L4o=",
+  "dgSpecHash": "jMKUYEedh+U=",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\source\\repos\\VaninChat2\\VaninChat2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\cryptonet\\3.4.3\\cryptonet.3.4.3.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\dropbox.api\\7.0.0\\dropbox.api.7.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\googlegson\\2.13.0.1\\googlegson.2.13.0.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.8\\microsoft.extensions.configuration.9.0.8.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.8\\microsoft.extensions.configuration.abstractions.9.0.8.nupkg.sha512",
